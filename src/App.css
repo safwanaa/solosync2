@@ -1,0 +1,1593 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7E64F1;
+  color: white;
+  padding: 10px 20px;
+  width: 97.5vw;
+  height: 28px;
+  position: fixed;
+  top: 0vh;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  font-family: 'inter', sans-serif;
+
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  border-radius: 5px;
+  mix-blend-mode: hard-light;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.51);
+  align-items: center;
+}
+
+
+.search-box input[type="text"] {
+  border: none;
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  margin-left: 5px;
+
+}
+
+.nav-icons {
+  display: flex;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.nav-icon {
+  display: flex;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 5px;
+  
+  
+}
+
+.nav-icon svg {
+  padding: 4px;
+
+}
+
+
+.nav-icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-left {
+    flex-direction: column;
+    /* Change flex direction to column */
+    align-items: flex-start;
+    /* Align items to the start */
+  }
+
+  .search-box {
+    margin-top: 10px;
+    /* Add margin for separation */
+  }
+
+  .nav-icons {
+    margin-top: 10px;
+    /* Add margin for separation */
+  }
+
+  .nav-icon {
+    margin-left: 5%;
+    /* Reset margin for icons */
+  }
+}
+
+/* header */
+/* Header.css */
+
+.header {
+  grid-area: header;
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 48px;
+  left: 17vw;
+  /* Adjust this value to match the width of your sidebar */
+  right: 0;
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border */
+  padding-bottom: 10px;
+  /* Add some padding to separate the line from the content */
+  height: 20px;
+  z-index: 999;
+
+}
+
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: left;
+}
+
+.menu-icon svg {
+  margin-right: 5px;
+}
+
+.menu-icon h5 {
+  margin: 0;
+  margin-right: 14px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left svg {
+  margin-right: 8px;
+  /* Adjust this value for the desired gap */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  padding-left: 1100px;
+
+}
+
+
+.header-right svg {
+  margin-left: 10px;
+}
+
+.header-icon {
+  font-size: 24px;
+
+
+}
+
+.head-left {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+
+
+}
+
+
+/* sidebar */
+#sidebar {
+
+  width: 17vw;
+  height: 100vh;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  font-family: 'inter', sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  top: 48px;
+  background-color: #fffbfb;
+
+
+
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  height: 20px;
+
+}
+
+
+
+.profile-icon-square {
+  width: 20px;
+  /* Adjust size as needed */
+  height: 20px;
+  /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  /* Add border for square appearance */
+  color: #7E64F1;
+  background-color: #BFAAFF;
+  position: relative;
+  border-radius: 5px;
+
+}
+
+
+.icon {
+  color: black;
+  font-size: 2px;
+
+}
+
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+
+.sidebar-list {
+  padding: 5%;
+  list-style-type: none;
+
+
+
+
+
+}
+
+.sidebar-list-item {
+  padding: 5px 10px 0px 10px;
+  font-size: 14px;
+  border: 2px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #0a0a0a;
+  transition: color 0.3s ease;
+  font-family: "inter", sans-serif;
+  background-color: transparent; 
+}
+
+.sidebar-list-item svg {
+  margin-right: 8px;
+
+  /* Adjust this value for the desired gap */
+
+
+}
+
+.sidebar-list-item:hover {
+  background-color: #BFAAFF;
+  padding-left: 2px;
+  padding-right: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(68, 67, 70, 0.6);
+  color:  #7E64F1
+}
+
+.sidebar-list-item a .icon {
+  margin-right: 10px;
+  color: #333;
+  /* Adjust the margin to add space between icon and text */
+}
+
+.sidebar-list-item:hover {
+  color:  #7E64F1 !important;
+  /* Change text color to black on hover */
+  
+
+}
+
+.sidebar-list-item a {
+  text-decoration: none;
+  color:rgb(114, 113, 113);
+  transition: color 0.3s ease;
+  padding-top: 20px;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+
+}
+
+.novox {
+  padding-left: 10px;
+
+}
+
+.text-wrapper-2 {
+  padding-left: 60px;
+
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  /* Add a bottom border */
+  padding-bottom: 10px;
+  /* Add some padding to separate the line from the content */
+}
+
+.sidebar-divider {
+  width: 100%;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  /* border-top: 1px solid #ccc;  */
+
+
+}
+
+
+.sidebar-foot {
+
+  padding-top: calc(100vh - 460px);
+  padding-left: 10%;
+  font-family: 'inter', sans-serif;
+}
+
+.sidebar-foot svg {
+  margin-right: 5px;
+  vertical-align: middle;
+  color: grey;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-foot {
+    padding-top: 100px;
+    /* Adjust as needed for smaller screens */
+    padding-left: 20px;
+    /* Adjust as needed for smaller screens */
+  }
+}
+
+
+.main-div {
+  display: flex;
+  height: 1400px;
+  top: 90px;
+  left: calc(15vw + 30px);
+  right: 10px;
+  position: absolute;
+  }
+
+.div-greeting {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'inter', sans-serif;
+}
+
+.main-card {
+  width: calc(100vw - 270px);
+  height: calc(200vh - 50px);
+  left: 10vw;
+  display: flex;
+  flex-direction: column;
+  bottom: 90px;
+  overflow-y: auto;
+}
+
+
+.flex-container,
+.flex-container-2,
+.flex-container-3 {
+  display: flex;
+}
+
+.div-task,
+.div-meeting,.div-linechart,
+.div-piechart  {
+  left: 10px;
+  width: 56vw;
+  height: calc(50vh - 100px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* .div-linechart,
+.div-piechart {
+
+  width: 60vw;
+  height: calc(50vh - 100px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+
+} */
+
+.upcoming-main {
+  display: flex;
+}
+
+.task0 {
+  padding-left: 20px;
+  right: 20px;
+  padding-top: 15px;
+
+}
+
+
+.uptask-svg {
+  margin-left: 300px;
+  padding-top: 15px;
+  padding-left: 20px;
+
+}
+
+.task1,
+.task2,
+.task3,
+.task4 {
+  padding: 2px;
+  padding-left: 20px;
+}
+
+.img {
+  margin-right: 10px;
+  /* Adjust the value as needed */
+
+}
+
+
+/* line.css */
+
+.ResponsiveContainer {
+  width: 100%;
+  /* Set the width to 100% */
+  height: 200px;
+  /* Set the height to 200px */
+}
+
+
+.div-linechart .recharts-responsive-container {
+  margin-top: 10px;
+  /* Adjust as needed */
+}
+
+/* Hide the X-axis */
+.div-linechart .recharts-cartesian-axis-x line {
+  display: none;
+}
+
+.linechart-container {
+  padding: 40px;
+}
+
+
+
+.linechart-cell {
+  padding: 1px;
+}
+
+.line-rev {
+  display: flex;
+}
+
+.line-main {
+
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+.side-part {
+  color: rgb(21, 209, 21);
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 300px;
+
+
+
+}
+
+.side-part svg {
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 576px) {
+  .linechart-container {
+    padding: 10px; /* Further adjust padding for smaller screens */
+  }
+
+  .side-part {
+    padding-left: 10px; /* Further adjust padding for smaller screens */
+  }
+
+  .side-part svg {
+    margin-right: 2px; /* Adjust margin for smaller screens */
+  }
+}
+
+
+
+
+
+/* meet css */
+
+
+
+.meet0 {
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+.div-meet1,
+.div-meet2,
+.div-meet3,
+.div-meet4 {
+  padding: 2px;
+  padding-left: 20px;
+  margin-right: 5px;
+}
+
+/* You can style the SVG icons if needed */
+.div-meeting svg {
+  vertical-align: middle;
+  /* Adjust vertical alignment of the SVG */
+  margin-right: 9px;
+  /* Add margin to the right of the SVG icon */
+}
+
+
+
+
+
+/* piechart css */
+
+
+.pie-main {
+  margin-left: 400px;
+  padding-top: 20px;
+}
+.pie-flex {
+  /* background-color: #7E64F1; */
+  display: flex;
+
+}
+
+.piechart-align {
+  /* background-color: brown; */
+  width: 60%;
+}
+
+.ind-line {
+  /* background-color:#ddd; */
+  width: 40%;
+}
+
+.custom-hr1,
+.custom-hr2,
+.custom-hr3 {
+  margin: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  
+  
+  height: 15px;
+}
+
+.custom-hr1 {
+  width: 60%;
+  background-color: #7E64F1;
+}
+
+.custom-hr2 {
+  width: 40%;
+  background-color: #39EBFF;
+
+
+}
+
+.custom-hr3 {
+  width: 15%;
+  background-color: #F8C646;
+
+} 
+
+/* responsive */
+@media only screen and (max-width: 600px) {
+  .main-card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-leads,
+  .card-revenue,
+  .card-deals {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+.main-card-2 {
+  display: flex;
+  justify-content: space-between;
+  /* Adjust spacing between cards */
+}
+
+.card-leads,
+.card-revenue,
+.card-deals {
+  width: calc(30% - 20px);
+  height: calc(48vh - 220px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+}
+
+/* lead */
+.lead-status {
+  padding: 20px;
+
+}
+
+.lead-arrow {
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(21, 209, 21);
+  padding-left: 20px;
+  padding-top: 20px;
+
+
+}
+
+.wrt-2 {
+  display: flex;
+}
+
+.percent0 {
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(21, 209, 21);
+  padding-left: 50%;
+  padding-top: 20px;
+}
+
+
+/* revenue */
+.wrt {
+  display: flex;
+
+}
+
+.rupee {
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(218, 16, 16);
+  padding-left: 20px;
+  padding-top: 20px;
+
+
+}
+
+.percent1 {
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(218, 16, 16);
+  padding-left: 40%;
+  padding-top: 20px;
+
+}
+
+
+/* deal */
+
+.content-deals {
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: 'inter', sans-serif;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+/* Common styles */
+.lead-status {
+  padding: 20px;
+}
+
+/* Leads */
+.card-leads {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead-arrow,
+.percent0 {
+  font-weight: bolder;
+  font-size: x-large;
+  padding-top: 20px;
+}
+
+/* Revenue */
+.card-revenue {
+  display: flex;
+  flex-direction: column;
+}
+
+.rupee,
+.percent1 {
+  font-weight: bolder;
+  font-size: x-large;
+  padding-top: 20px;
+}
+
+/* Deals */
+.card-deals {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-deals {
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: 'inter', sans-serif;
+  padding-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 768px) {
+
+  .card-leads,
+  .card-revenue,
+  .card-deals {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .main-card-2 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card-leads,
+  .card-revenue,
+  .card-deals {
+    width: 30%;
+  }
+}
+
+.table-card {
+  width: 69vw;
+  /* Adjust width of each card */
+  height: calc(100vh - 500px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 40px;
+  padding: 70px;
+  margin-left: 20px;
+  padding-bottom: 20px;
+  overflow-x: auto;
+}
+
+
+
+.today-lead {
+  margin-right: 500px;
+
+}
+
+
+/* Style for table */
+.lead-table {
+  width: 100%;
+  /* border-collapse: collapse; */
+}
+
+/* Style for table header */
+.lead-table th {
+
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-family: 'inter', sans-serif;
+}
+
+/* Style for table header cells except the last one */
+.lead-table th:not(:last-child) {
+  border-right: none;
+}
+
+/* Style for table body rows */
+.lead-table td {
+  text-align: center;
+  padding: 8px;
+}
+
+.lead-table tbody tr:last-child td {
+  border-bottom: 1px solid #ddd;
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .lead-table {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .lead-table thead,
+  .lead-table tbody,
+  .lead-table tr,
+  .lead-table th,
+  .lead-table td {
+    display: block;
+  }
+
+  .lead-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .lead-table td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 50%;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .lead-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+/* Additional responsive styles for card */
+@media screen and (max-width: 400px) {
+  .table-card {
+    padding: 10px;
+  }
+
+  .today-lead {
+    font-size: 14px;
+  }
+}
+/* task pageeeeee */
+/* task header */
+/* contacts and meeting add buttoon */
+.allighncont{
+  display: flex;
+  padding-left: 765px;
+  
+}
+/* addtask and action button */
+.addformbutt  button {
+  width: 150px;
+  height: 30px;
+  background-color: #7E64F1;
+  border:#ccc;
+  padding: 3px 16px;
+  font-size: 15px;
+  font-family: 'inter',sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+}
+
+.addformbutt button:hover {
+  background-color:#BFAAFF; /* Darker shade for hover effect */
+}
+
+.addformbutt button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.addformbutt svg{
+  color: white;
+}
+
+
+/* add new task */
+.addtask-maincard{
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:hidden;
+   
+  
+
+
+}
+.add-new-task{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  
+}
+
+
+.save-button,
+.saveadd-button,
+.cancel-button {
+  margin-top: -40px;
+  padding: 5px;
+ }
+.all-head-alighn{
+  display: flex;
+  flex-direction:column;
+} 
+.all-button{
+  display: flex;
+  padding-left: 70%;
+
+
+}
+button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.save-button button {
+  background-color:#7E64F1;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(68, 67, 70, 0.6);
+}
+
+.saveadd-button button {
+  background-color: #eee8e8;
+  color:black;
+  box-shadow: 0px 4px 8px rgba(68, 67, 70, 0.6);
+}
+
+.cancel-button button {
+  background-color: #eee8e8;
+  color:black;
+  box-shadow: 0px 4px 8px rgba(68, 67, 70, 0.6);
+}
+@media screen and (max-width: 768px) {
+  .all-button {
+    flex-direction: column;
+  }
+
+  .save-button,
+  .saveadd-button,
+  .cancel-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+/* add newtask content card */
+.inner-card{
+  width: 69vw;
+  height: calc(100vh - 300px);
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px 2px rgba(196, 196, 193, 0.233);
+  margin-top: 40px;
+  padding: 70px;
+  margin-left: 5px;
+  padding-bottom: 20px;
+  overflow-x: auto;
+}
+.task-infohead{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin-left: -40px;
+  margin-top: -40px;
+}
+
+.description-info{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-left: -40px;
+  margin-top: 40px;
+ 
+}
+
+.description-field {
+  border: none;
+  border-bottom: 2px solid rgb(177, 172, 172);
+  width: 100%; /* Ensure full width */
+ }
+
+.description-field:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(177, 172, 172);
+  background-color:#BFAAFF;
+}
+
+label[for="description"] {
+ 
+font-family: 'inter',sans-serif;
+color: rgb(94, 90, 90);
+}
+
+form {
+ position: relative; /* Required for centering */
+}
+
+.form-group {
+  margin-bottom: 10px; /* Add some space between form groups */
+  color: rgb(94, 90, 90);
+  font-family: 'inter',sans-serif;
+  position: relative; /* Required for centering */
+}
+.underline {
+  border: none; /* Remove border */
+  background-color: transparent; /* Remove background color */
+  padding: 0; /* Remove padding */
+  outline: none; /* Remove outline */
+}
+label {
+  display: block; /* Make labels appear on their own line */
+  margin-bottom: 5px; /* Add some space between labels and inputs */
+  border: none;
+  
+}
+label[for="contact"] {
+ padding: 5px;
+  
+}
+input.underline,
+select.underline {
+  border: none;
+  border-bottom: 2px solid rgb(177, 172, 172); /* You can adjust the color and style as needed */
+  margin-bottom: 5px; /* Add some space between fields */
+  display: block; /* Make the inputs appear on their own line */
+  color: rgb(94, 90, 90);
+ 
+}
+/* Style for text input type */
+input[type="text"].underline,
+input[type="date"].underline {
+  border-bottom: 2px solid rgb(177, 172, 172);  /* Add bottom border */
+  padding: px; /* Add padding */
+  width: 100%; /* Ensure inputs take full width */
+
+}
+
+/* Style for select element */
+select.underline {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(177, 172, 172); /* You can adjust the color and style as needed */
+  padding: 2px; /* Adjust padding to match your design */
+  margin-bottom: 5px; /* Add some space between fields */
+  display: block; /* Make the inputs appear on their own line */
+}
+
+
+/* Optional: Style for select arrow icon */
+select.underline::-ms-expand {
+  display:none; /* Remove default arrow icon for IE */
+}
+
+.input-wrapper{
+  position: relative;
+}
+ 
+/* toggle switch */
+
+.react-switch {
+  vertical-align: middle;
+  margin-left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -60px;
+}
+
+
+
+/* other componnets */
+.both-butt{
+  display: flex;
+  padding-left: 800px;
+}  
+.addbutt button {
+  width: 150px;
+  height: 30px;
+  background-color: #7E64F1;
+  border:#ccc;
+  padding: 3px 16px;
+  font-size: 15px;
+  font-family: 'inter',sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  margin-bottom: 4px;
+}
+
+.addbutt button:hover {
+  background-color:#BFAAFF; /* Darker shade for hover effect */
+}
+
+.addbutt button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.addbutt svg{
+  color: white;
+  
+  
+}
+/* button 2 */
+
+.popup {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 8px;
+}
+
+.popup button {
+  display: block;
+  margin-bottom: 4px;
+}
+.action-task{
+ 
+  margin-left: 10px;
+  width: 150px;
+  height: 30px;
+  background-color:white;
+  border:grey;
+  padding: 3px 16px;
+  font-size: 15px;
+  font-family: 'inter',sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  }
+  
+  /* Hover effect */
+  .action-task:hover {
+  background-color:#ccc; /* Darker blue on hover */
+  }
+
+/* task content */
+
+/* .maindiv-t {
+  width: 80%; 
+  margin: 0 auto; 
+  padding: 20px; 
+  background-color: #BFAAFF;
+}  */
+
+.task-maincard {
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+
+}
+
+
+/* main card record */
+.taskside-align{
+  display: flex;
+  flex-direction: column;
+}
+.record-div {
+margin-bottom:-0px ;
+border-radius: 8px;
+padding: 8px;
+height: 40px;
+width: 19%; /* Adjust width as needed */
+margin-left: 70%;
+display: flex;
+align-items: center;
+
+}
+
+.record-div select {
+  height: 90%;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  outline:none;
+  background-color: white; /* Background color */
+  font-size: 15px; /* Font size */
+  font-family: 'inter';
+  padding-left: 30px;
+  margin-right: 10px;
+   margin-bottom:250px ;
+  
+}
+
+/* Style for select options */
+.record-div select option {
+  font-size: 15px; /* Font size */
+  font-family: 'inter';
+  
+ 
+}
+
+
+.great {
+  margin-left: 95%;
+  margin-bottom: -300px;
+  margin-top: -160px; /* Adjust this value as needed */
+}
+
+.great svg {
+  padding-bottom: -200px; /* This line may not be necessary, consider removing it */
+  margin-top: -50px; /* Adjust this value as needed */
+}
+
+
+
+.table-card1 {
+  width: 100%;
+  height: calc(100vh - 500px);
+  overflow-x: auto;
+  border: 1px solid #ddd; /* Add border for the card */
+  border-radius: 8px; /* Add border radius to make it rounded */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  margin: 20px auto;
+  overflow-x: auto;
+  margin-bottom: 0px;
+
+  
+}
+
+/* Define styles for the table */
+.table-card1 table {
+    width: 100%; /* Make the table fill the entire card width */
+    border-collapse: collapse; 
+  }
+
+/* Define styles for table header */
+.table-card1 th {
+   padding: 12px 15px; /* Add padding to header cells */
+   
+}
+
+
+/* Define styles for table body */
+.table-card1 td {
+    padding: 12px 15px; /* Add padding to body cells */
+    border-top: 1px solid #ddd; /* Add a top border to separate rows */
+}
+
+/* Define styles for alternate rows */
+.table-card1 tbody tr:nth-child(even) {
+   
+}
+
+/* Define styles for checkbox input */
+.table-card1 input[type="checkbox"] {
+    margin-right: 15px; /* Add some margin to the right of the checkbox */
+}
+
+/* Define styles for line breaks within table cells */
+.table-card1 td br {
+    display: none; /* Hide line breaks within table cells */
+}
+.table-card1 th svg {
+  margin-left: 50px;
+}
+
+
+
+.table-card1 th,
+.table-card1 td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table-card1 th {
+
+}
+
+.table-card1 tr:nth-child(even) {
+  
+}
+
+/* calls pagecss */
+.sechdled{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  color: #525151;
+ 
+
+}
+
+.Call-Log{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  color: #525151;
+  padding-top: 20px;
+  
+}
+
+/* Define styles for line breaks within table cells on smaller screens */
+@media (max-width: 768px) {
+    .table-card1 td br {
+        display: block; /* Show line breaks within table cells on smaller screens */
+    }
+}
+
+
+
+
+/* analytics page */
+.analytics-maincard{
+  height: calc(200vh - 50px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-left:17%;
+  margin-right: 40px;
+  margin-top: -100px;
+  overflow-y: hidden;
+
+}
+.analytics4-card{
+  width: calc(40% - 10px);
+  height: calc(48vh - 150px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  /* background-color: #F8C646; */
+  margin-left: 20px;
+}
+
+.half-doughnut {
+  width: 200px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.analytics5-card{
+  width: calc(50% - 0px); 
+  height: calc(48vh - 140px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-left: auto;
+  /* background-color: #BFAAFF; */
+  margin-top:-215px;
+  margin-right: 20px;
+  
+}
+.analyc5-head{
+  padding-top: 20px;
+  margin-left: 20px;
+  font-family: 'inter',sans-serif;
+  font-size:smaller;
+  font-weight: bold;
+}
+.barchart-svg{
+
+  margin-left:80%;
+  margin-top:-20px;
+  padding-left: 20px;
+}
+.barchart{
+  width: 100%;
+  height: 100%;
+}
+.barchart canvas {
+  width: 80% !important;
+  height: 60% !important;
+  max-width: 80%;
+  max-height: 60%;
+  font-family: 'inter',sans-serif;
+  margin:0 auto;
+  padding-top: 20px;
+}
+
+.analytics6-card{
+  width: calc(50% - 40px);
+  height: calc(48vh - 120px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  /* background-color: #F8C646; */
+  margin-left: 20px;
+  }
+.analyc6-head{
+  margin-left: 20px;
+  font-family: 'inter',sans-serif;
+  font-size:smaller;
+  font-weight: bold;
+}
+/* card 6 tables   */
+.table-container {
+  width: 89%;
+  display: flex;
+  justify-content: center; /* Centers the table horizontally */
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.analytics-table {
+  width: 100%;
+  margin-top:10px ;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+}
+td {
+  font-family: 'inter',sans-serif;
+  font-size: small;
+  font-weight: bold;
+  border-right: 3px solid #ddd; 
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+
+  text-align: center;
+}
+
+th {
+   font-family: 'inter',sans-serif;
+   font-size: x-small;
+   color: grey;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0d1f5;
+}
+
+tr > td:first-child + td {
+  border-left: 3px solid #ddd;
+}
+
+
+th:not(:first-child) {
+  border-bottom: 3px solid #ddd;
+}
+
+ 
+.analytics7-card{
+  width: calc(50% - 20px);
+  height: calc(48vh - 140px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  margin-left: 50%;
+  /* background-color: #F8C646; */
+  margin-top:-235px;
+  padding-top: 20px;
+  
+  }
+
+  .analytics-doughnutchart {
+    width: 100%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    position: relative;
+  }
+  
+  .analytics-doughnutchart canvas {
+    width: 50% !important;
+    height: 40% !important;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 20%;
+  }
+  
+  .analyc7-head{
+     margin-left: 20px;
+     font-family: 'inter',sans-serif;
+     font-size:smaller;
+     font-weight: bold;
+  }
+
+.analytics8-card{
+  width: calc(50% - 20px);
+  height: calc(48vh - 50px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  /* background-color: #F8C646; */
+  margin-left: 20px;
+}
+
+.analyc8-head{
+  margin-left: 20px;
+  font-family: 'inter',sans-serif;
+  font-size:smaller;
+  font-weight: bold;
+  padding-top: 10px;
+  
+}
+
+.analytics-piechart {
+  width: 40%; /* Set width according to your preference */
+  height: 40%; /* Set height according to your preference */
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 30px;
+
+}
+
+/* Additional styling for the canvas element */
+.piechart canvas {
+  display: block;
+  margin: 0 auto; /* Center the canvas within its container */
+}
+
+.stacked-piechart {
+  width: 40%; /* Set width according to your preference */
+  height: 40%; /* Set height according to your preference */
+  margin-top:-120px ;
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+.tot-rev{
+  margin-bottom: -200px;
+  margin-left: 50%;
+
+}
+
+.card8-1,
+.card8-2,
+.card8-3 {
+  margin-bottom: -100px; /* Spacing between cards */
+  padding-bottom: 40px;
+}
+
