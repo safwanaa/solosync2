@@ -13,6 +13,12 @@ import Deal from './deal';
 import Analytics  from './analytics';
 import { BrowserRouter, Routes ,Route,Link, Router } from 'react-router-dom';
 import AddTask from './addtask';
+import AddMeeting from './addmeeting';
+import AddTaskHome from './addtaskhome';
+import CreateContact from './createcontact';
+
+
+
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -75,6 +81,12 @@ function App() {
       <Route path="/deal" element={<Deal />} />
       <Route path="/analytics" element={<Analytics />} />
       <Route path="/addtask" element={<AddTask />} />
+      <Route path="/addmeeting" element={<AddMeeting />} />
+      <Route path="/addtaskhome" element={<AddTaskHome />} />
+      <Route path="/createcontact" element={<CreateContact />} />
+
+
+    
       </Routes>
       </div>
       </BrowserRouter> 

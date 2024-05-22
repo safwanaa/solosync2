@@ -1,12 +1,12 @@
 import Header from "./header";
-import React, { useState, } from 'react';
+import React from 'react';
 import profileImage from './assets/profile.jpg';
 
 
 
 
 
-export default function AddMeeting(){
+export default function AddTaskHome(){
 
    
 return (
@@ -16,15 +16,15 @@ return (
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 	<path fill="currentColor" d="m10.95 16.866l4.958-4.958l-.72-.72l-4.244 4.245l-2.138-2.139l-.714.714zM6.616 21q-.691 0-1.153-.462T5 19.385V4.615q0-.69.463-1.152T6.616 3H14.5L19 7.5v11.885q0 .69-.462 1.153T17.384 21zM14 8V4H6.616q-.231 0-.424.192T6 4.615v14.77q0 .23.192.423t.423.192h10.77q.23 0 .423-.192t.192-.424V8zM6 4v4zv16z" />
-</svg>Meetings | Meeting 1
+</svg>Task | Task 1
 </div>
 </div>
 </header>
    {/* main content */}
 
-   <div className="addmeet-maincard">{/* main card */}
-    <div className="all-headm-alighn"> {/* both head and button alighn */}
-    <div className="add-new-meet"><h2>Meeting 1</h2></div>
+   <div className="addtaskhome-maincard">{/* main card */}
+   
+    <div className="add-new-taskh"><h2>Task 1</h2></div>
     <div className="allmeet-button">{/* alighning both edit and delete button*/}
    <div className="edit-button">{/* edit button*/}
     <button className="edit-button">Edit</button>
@@ -35,33 +35,11 @@ return (
 </svg></button>
    </div>
    </div>
-   </div>
-   <div className="meetinner-card1">
-     <div className="meet1-d"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
-	<g fill="none">
-		<path fill="currentColor" d="M2 9c0-1.886 0-2.828.586-3.414C3.172 5 4.114 5 6 5h12c1.886 0 2.828 0 3.414.586C22 6.172 22 7.114 22 9c0 .471 0 .707-.146.854C21.707 10 21.47 10 21 10H3c-.471 0-.707 0-.854-.146C2 9.707 2 9.47 2 9m0 9c0 1.886 0 2.828.586 3.414C3.172 22 4.114 22 6 22h12c1.886 0 2.828 0 3.414-.586C22 20.828 22 19.886 22 18v-5c0-.471 0-.707-.146-.854C21.707 12 21.47 12 21 12H3c-.471 0-.707 0-.854.146C2 12.293 2 12.53 2 13z" />
-		<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7 3v3m10-3v3" />
-	</g>
-</svg>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18/01/2024</div>
-     <div className="meet2-t"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
-	<path fill="currentColor" fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14m.75-10.5a.75.75 0 0 0-1.5 0V8a.75.75 0 0 0 .3.6l2 1.5a.75.75 0 1 0 .9-1.2l-1.7-1.275z" clip-rule="evenodd" />
-</svg>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1:00-2:00</div>
-<div className="meet3-container">
-     <div className="meet3-h"><h6>Host</h6>David Luca</div>
-     <div className="meet4-s"><h6>Subject</h6></div>Final Sitting</div>
-   </div>
-   <div className="meetinner-card2">
-    <div className="partihead-butt">
-   <div className="add-partipint">Partcipants</div>
-   <button className="addparti-button">Add</button>
-   </div>
-   <div className="add-noparti">No paticipants found</div>
-   
-</div>
-<div className="meetinner-card3">
-   <div className="description">Description</div>
-   <div className="descr-para">Description abput the meeting will appear here.</div>
-</div>
+
+   <div className="taskinner-card1">
+     </div>
+   <div className="taskinner-card2">
+    </div>
 <div className="meetinner-card4">
 <div className="profile-container">
 <img className="profile-image" src={profileImage} alt="Profile" />
@@ -94,4 +72,4 @@ return (
   
  </>
    )
-}  
+}   

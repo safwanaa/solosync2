@@ -1,12 +1,35 @@
-import Header from "./header";
 import React, { useState } from 'react';
+// import { Modal, Button, Form } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export default function Task(){
+export default function Meeting(){
 
+    
     const [recordsPerPage, setRecordsPerPage] = useState(10);
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const togglePopup = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    const handleSave = (e) => {
+      e.preventDefault();
+      // Logic to save the new meeting
+      togglePopup();
+    };
+    
+    // const [showModal, setShowModal] = useState(false);
+    
+    // const handleShowModal = () => setShowModal(true);
+    // const handleCloseModal = () => setShowModal(false);
 
+    // const handleSave = (e) => {
+    //     e.preventDefault();
+    //     // Logic to save the new meeting
+    //     handleCloseModal();
+    // };
     const handleRecordsPerPageChange = (value) => {
         setRecordsPerPage(value);
         // You can perform additional actions here, like fetching data for the new page size
@@ -39,6 +62,8 @@ export default function Task(){
         });
     });
 
+   
+
     
     
 
@@ -54,9 +79,11 @@ export default function Task(){
 </svg>Meetings
    <div className="allighncont">
    <div className="addformbutt">
-    <button  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
-	<path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
-</svg>Add</button>
+   <button onClick={togglePopup}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+                    <path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
+                  </svg>Add Meeting
+                </button>
  </div>
  <select className='action-task'>
 
@@ -66,15 +93,15 @@ export default function Task(){
 </div> 
 </div>   
       </div>
- 
+  
         
-    </header>
+    </header> 
  {/* content card */}
     <div className="maindiv-t">
     <div className="task-maincard">
        <div className="taskside-align">
         <div className="record-div">
-    <select onChange={(e) => handleRecordsPerPageChange(e.target.value)}>
+    <select onChange={(e) => handleRecordsPerPageChange(e.target.value)}>   
       <option value="10">10 Records per page</option>
       <option value="20">10 Records per page</option>
       <option value="30">10 Records per page</option>
@@ -83,7 +110,7 @@ export default function Task(){
     </div>
     <div className="great">
     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
-	<path fill="currentColor" fill-rule="evenodd" d="M17.5 17.5L9.25 12l8.25-5.5l-1-1.5L6 12l10.5 7z" />
+	<path fill="currentColor" fill-rule="evenodd" d="M17.5 17.5L9.25 12l8.25-5.5l-1-1.5L6 12l10.5 7z" /> 
 </svg>    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
 	<path fill="currentColor" fill-rule="evenodd" d="m6.5 17.5l8.25-5.5L6.5 6.5l1-1.5L18 12L7.5 19z" />
 </svg>
@@ -165,7 +192,91 @@ export default function Task(){
    
     </div>
     </div>
+    {isOpen && (
+        <div className="popup">
+          <div className="popup-inner">
+            <h2>New Meeting</h2>
+            <form onSubmit={handleSave}>
+              <label>
+                Meeting Title:
+                <input type="text" name="title" required />
+              </label>
+              <label>
+                Location:
+                <input type="text" name="location" required />
+              </label>
+              <label>
+                From:
+                <input type="datetime-local" name="from" required />
+              </label>
+              <label>
+                To:
+                <input type="datetime-local" name="to" required />
+              </label>
+              <label>
+                Host:
+                <input type="text" name="host" required />
+              </label>
+              <label>
+                Participants:
+                <input type="text" name="participants" required />
+              </label>
+              <label>
+                Description:
+                <textarea name="description" rows="3" required />
+              </label>
+              <button type="submit">Save</button>
+              <button type="button" onClick={togglePopup}>Cancel</button>
+            </form>
+          </div>
+        </div>
+         )}
+    {/* <Modal show={showModal} onHide={handleCloseModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title> Meeting information</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form onSubmit={handleSave}>
+                        <Form.Group className="mb-3" controlId="formMeetingTitle">
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" placeholder="New Meeting" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formLocation">
+                            <Form.Label></Form.Label>
+                            <Form.Control type="text" placeholder="Enter location" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formFrom">
+                            <Form.Label>from</Form.Label>
+                            <Form.Control type="datetime-local" placeholder='from' required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formTo">
+                            <Form.Label>To</Form.Label>
+                            <Form.Control type="datetime-local" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formHost">
+                            <Form.Label>Host</Form.Label>
+                            <Form.Control type="text" placeholder="Enter host name" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formParticipants">
+                            <Form.Label>Participants</Form.Label>
+                            <Form.Control type="text" placeholder="Enter participants" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formDescription">
+                            <Form.Label>Description</Form.Label>
+                            <Form.Control as="textarea" rows={3} placeholder="Enter description" required />
+                        </Form.Group>
+                       &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+                        <button className='button1-sav' type="submit">
+                            Save
+                        </button>  &nbsp;  &nbsp;  &nbsp;
+                        <button className="button2-can" type="submit">
+                            Cancel
+                        </button>
+                    </Form>
+                </Modal.Body>
+            </Modal> */}
      
     </>
     )
 }
+

@@ -259,6 +259,7 @@ export default function Analytics(){
            <div className="half-doughnut">
            <canvas ref={halfDoughnutChartContainer}></canvas>
            </div>
+         
           </div>
           <div className="analytics5-card">
           <div className="analyc5-head">Revenue Generation Target - This Year&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="-1.5 -2.5 24 24">

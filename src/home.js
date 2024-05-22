@@ -67,6 +67,7 @@ const App = () => {
   // ];
 
   // const COLORS = ['#7E64F1', '#7E64F1','#7E64F1','#7E64F1'];
+  
 
   return (
     <div className="scrollable-container">
@@ -90,11 +91,11 @@ const App = () => {
 
 
               <br /><br />
-
+              <a href="/addtaskhome">
               <div className="task1"><img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b0a937d7abc3ba5c278a460cfa7e5a53b3779775d856f967ef7499e5309ea42?"
-                className="img" />Task 1</div>
+                className="img" />Task 1</div></a>
               <div className="task2"><img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b0a937d7abc3ba5c278a460cfa7e5a53b3779775d856f967ef7499e5309ea42?"
@@ -236,10 +237,10 @@ const App = () => {
 </svg></div>
               </div>
               <br /><br />
-
+              <a href='/addmeeting'>
               <div className='div-meet1'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" d="M5 13.5h14m-7 0V24M6.5 11V6.5H5.328a3 3 0 0 0-2.906 2.255L.5 16.25v.25h7V18c0 1.5 0 2.5.75 4c0 0 .75 1.5 1.75 1.5M17.5 11V6.5h1.172a3 3 0 0 1 2.906 2.255L23.5 16.25v.25h-7V18c0 1.5 0 2.5-.75 4c0 0-.75 1.5-1.75 1.5m-7.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C8.246 3.5 6.65 4.5 6.65 4.5zm11.3 0s1.6-1 1.6-2.25A1.75 1.75 0 0 0 17.5.5c-.966 0-1.746.784-1.746 1.75c0 1.25 1.596 2.25 1.596 2.25z" /></svg>   Meeting 1
-              </div>
+              </div></a>
               <div className='div-meet2'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" d="M5 13.5h14m-7 0V24M6.5 11V6.5H5.328a3 3 0 0 0-2.906 2.255L.5 16.25v.25h7V18c0 1.5 0 2.5.75 4c0 0 .75 1.5 1.75 1.5M17.5 11V6.5h1.172a3 3 0 0 1 2.906 2.255L23.5 16.25v.25h-7V18c0 1.5 0 2.5-.75 4c0 0-.75 1.5-1.75 1.5m-7.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C8.246 3.5 6.65 4.5 6.65 4.5zm11.3 0s1.6-1 1.6-2.25A1.75 1.75 0 0 0 17.5.5c-.966 0-1.746.784-1.746 1.75c0 1.25 1.596 2.25 1.596 2.25z" /></svg>   Meeting 2
               </div>

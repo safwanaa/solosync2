@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./header";
 import React, { useState } from 'react';
 
@@ -27,10 +28,10 @@ export default function Task(){
 </svg>Contacts
   
    <div className="allighncont">
-   <div className="addformbutt">
+   <div className="addformbutt"><Link to="/createcontact">
     <button  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
 	<path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
-</svg>Add</button>
+</svg>Add contact</button></Link>
  </div>
  <select className='action-task'>
 

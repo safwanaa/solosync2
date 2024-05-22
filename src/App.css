@@ -177,7 +177,6 @@
 
 /* sidebar */
 #sidebar {
-
   width: 17vw;
   height: 100vh;
   position: fixed;
@@ -252,18 +251,17 @@
 
 .sidebar-list-item {
   padding: 5px 10px 0px 10px;
-  font-size: 14px;
+  font-size: 15px;
   border: 2px;
   border-radius: 5px;
   text-decoration: none;
   color: #0a0a0a;
-  transition: color 0.3s ease;
-  font-family: "inter", sans-serif;
-  background-color: transparent; 
+  font-family: 'inter', sans-serif;
+  
 }
 
 .sidebar-list-item svg {
-  margin-right: 8px;
+  margin-right: 10px;
 
   /* Adjust this value for the desired gap */
 
@@ -295,8 +293,7 @@
 .sidebar-list-item a {
   text-decoration: none;
   color:rgb(114, 113, 113);
-  transition: color 0.3s ease;
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .sidebar-responsive {
@@ -319,9 +316,9 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  /* Add a bottom border */
+
   padding-bottom: 10px;
-  /* Add some padding to separate the line from the content */
+
 }
 
 .sidebar-divider {
@@ -329,17 +326,16 @@
   height: 1px;
   border: none;
   border-bottom: 1px solid #ccc;
-  /* border-top: 1px solid #ccc;  */
-
-
-}
+  }
 
 
 .sidebar-foot {
-
-  padding-top: calc(100vh - 460px);
+  border-bottom: 1px solid #ccc; 
+  margin-top: calc(100vh - 480px);
   padding-left: 10%;
   font-family: 'inter', sans-serif;
+
+
 }
 
 .sidebar-foot svg {
@@ -919,7 +915,305 @@
 .addformbutt svg{
   color: white;
 }
+/* add new meet */
+.addmeet-maincard{
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:hidden;
 
+}
+.add-new-meet{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+
+}
+
+.all-headm-alighn{
+  display: flex;
+
+  
+
+} 
+.allmeet-button{
+  display: flex;
+  padding-left: 45%;
+}
+
+
+.edit-button, .delete-icon {
+  margin-left: 8px; /* space between buttons */
+}
+
+.edit-button button, .delete-icon button {
+  background-color:#7E64F1; /* blue background color */
+  border: none; /* remove border */
+  color: #fff; /* white text color */
+  padding: 8px 12px; /* padding inside button */
+  border-radius: 4px; /* rounded corners */
+  cursor: pointer; /* pointer cursor on hover */
+  display: flex; /* flexbox for SVG alignment */
+  align-items: center; /* vertically center aligned */
+  margin-top: 22px;
+}
+
+.edit-button button:hover, .delete-icon button:hover {
+  background-color:#BFAAFF; /* darker blue on hover */
+}
+
+.delete-icon button {
+  background-color:#7E64F1; /* red background color */
+}
+.edit-button button{
+  padding: 8px 38px;
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+}
+
+.delete-icon button:hover {
+  background-color:#BFAAFF; /* darker red on hover */
+}
+
+.delete-icon svg {
+  fill: #fff; /* white fill for SVG */
+}
+.meetinner-card1,.meetinner-card2,.meetinner-card3{
+  margin-bottom: 40px;
+}
+.meetinner-card1{
+width: 45vw;
+height: calc(100vh - 600px);
+border-radius: 9px;
+box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+margin-top: 10px;
+padding: 70px;
+margin-left: 5px;
+padding-bottom: 20px;
+background-color:#ddd;
+}
+.meet3-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between the rows */
+}
+
+.meet3-h, .meet4-s {
+  display: flex;
+  align-items: center; /* Vertically center align */
+  gap: 8px; /* Space between label and text */
+  font-size: 1em; /* Consistent font size */
+}
+
+.meet3-h h6, .meet4-s h6 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2em; /* Slightly larger font size for labels */
+  color: #555; /* Slightly lighter text color for labels */
+}
+
+
+.meetinner-card2{
+  width: 45vw;
+  height: calc(100vh - 700px);
+  border-radius: 9px;
+  box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+  margin-top: 10px;
+  padding: 70px;
+  margin-left: 5px;
+  padding-bottom: 20px;
+
+
+  }
+.add-partipint{
+    font-family: 'inter',sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(68, 66, 66);
+    background-color: #39EBFF;
+}
+.add-noparti{
+   color: rgb(107, 107, 107);
+   
+ 
+}
+
+.partihead-butt{
+  display: flex;
+}
+.addparti-button {
+  background-color:#7E64F1; 
+  color: #fff; /* White text color */
+  margin-left: 80%;
+  padding: 5px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover and active states */
+
+
+}
+
+.addparti-button:hover {
+  background-color:#BFAAFF/* Darker blue on hover */
+}
+  .meetinner-card3{
+    width: 45vw;
+    height: calc(100vh - 700px);
+    border-radius: 9px;
+    box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+    margin-top: 10px;
+    padding: 70px;
+    margin-left: 5px;
+    padding-bottom: 20px;
+  
+    }
+
+.description{
+  color: rgb(68, 66, 66);
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+.descr-para{
+  color: rgb(107, 107, 107);
+}
+.meetinner-card4{
+  width: 10vw;
+  height: calc(100vh - 140px);
+  border-radius: 9px;
+  box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+  margin-top: -57%;
+  padding: 70px;
+  margin-left: 75%;
+  padding-bottom: 20px;
+  
+}
+
+/* Add these styles in your CSS file */
+.profile-container {
+  display: flex;  
+  align-items: center;
+  margin-top: -20px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: -10px;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.address1, .address2, .address3 {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.address1 svg, .address2 svg, .address3 svg {
+  margin-right: 15px;
+}
+
+.address1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  font-family: 'inter',sans-serif;
+}
+
+.address2, .address3 {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+  font-family: 'inter',sans-serif;
+}
+
+svg {
+  fill: #555;
+}
+.address-container{
+  margin-top: 50px;
+  border-bottom: 1px solid #ccc;
+  }
+.openact-container{
+  /* margin-top: 70%; */
+ 
+}  
+
+.open-activities{
+  font-size:large;
+  font-weight: bold;
+  color: #333;
+  font-family: 'inter',sans-serif;
+  margin-left: -40px;
+  margin-top: 40px;
+}
+
+.openactask-butt, .openactmeet-butt, .openactcall-butt {
+  padding: 10px 70px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: bold;
+  color: grey; /* White text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  margin-right: 10px; /* Adjust margin between buttons as needed */
+  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-left: -40px;
+}
+.openactask-butt{
+  padding:10px 82px;
+}
+.openactmeet-butt{
+  
+}
+.openactcall-butt{
+  padding:10px 82px;
+}
+
+.openactask-butt:hover, .openactmeet-butt:hover, .openactcall-butt:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.openactask-butt:focus, .openactmeet-butt:focus, .openactcall-butt:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+
+@media (max-width: 600px) {
+  .address1, .address2, .address3 {
+    font-size: 14px;
+  }
+  
+  .address1 svg, .address2 svg, .address3 svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .address1,
+  .address2,
+  .address3 {
+    font-size: 14px;
+  }
+
+  .address1 svg,
+  .address2 svg,
+  .address3 svg {
+    width: 12px;
+    height: 12px;
+  }
+}
 
 /* add new task */
 .addtask-maincard{
@@ -1568,7 +1862,7 @@ th:not(:first-child) {
 .stacked-piechart {
   width: 40%; /* Set width according to your preference */
   height: 40%; /* Set height according to your preference */
-  margin-top:-120px ;
+  margin-top:-140px ;
   margin-left: 20px;
 }
 
@@ -1591,3 +1885,267 @@ th:not(:first-child) {
   padding-bottom: 40px;
 }
 
+
+
+/* Meeting.css */
+
+/* Adjust the size of the modal */
+.modal-dialog {
+  max-width: 500px;
+  margin: 10% auto;
+}
+
+/* Style the modal header */
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-title {
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Underline style for form fields */
+.modal-body .form-control {
+  border: none;
+  border-bottom: 2px solid #ced4da;
+  border-radius: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding: -0px;
+}
+
+.modal-body .form-control:focus {
+  border-bottom: 2px solid #80bdff;
+  box-shadow: none;
+}
+
+.modal-body .form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Style the button */
+.modal-body .btn-primary {
+  background-color: #7E64F1;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.modal-body .btn:hover {
+  background-color: #7E64F1;
+
+}
+
+/* Style the modal footer */
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+.button1-sav{
+  background-color: #7E64F1;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button2-can{
+  
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  padding: 4px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* create contact  */
+
+.creatcont-maincard{
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:hidden;
+}
+.add-new-contact{
+  font-family: 'inter', sans-serif;
+  color: #4d5053;
+  
+}
+
+.savecrt-button button {
+  background-color: #7E64F1; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 8px 28px; /* Some padding */
+  font-size: 13px; /* Increase font size */
+  margin: 4px 7px; /* Add some margin */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+}
+
+.cancelcrt-button button {
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  padding: 8px 28px; /* Some padding */
+  font-size: 13px; /* Increase font size */
+  margin: 4px 4px; /* Add some margin */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+}
+.savecrt-button button:hover {
+  background-color: #6B53D3; /* Darker purple on hover */
+}
+
+.cancelcrt-button button:hover {
+  background-color: #E6E6E6; /* Light grey on hover */
+}
+
+.create-bothbuttalighn{
+  display: flex;
+  margin-left:80%;
+  margin-top: -50px;
+}
+
+.headcreate-butt{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* styles.css */
+
+.logos-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-image, .company-logo {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.text-area {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 10px;
+}
+
+.image-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  margin: 15px;
+}
+
+.contact-pic, .company-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info{
+  font-family: 'inter', sans-serif;
+  color: #4d5053;
+  font-size: 18px;
+  font-weight: bold;
+}
+.my-form{
+  margin-top: 20px;
+  
+}
+.my-form .form-row {
+   flex-wrap: wrap;
+  margin-bottom: 16px;
+  margin-left: 20px;
+}
+
+.my-form .form-column {
+  flex: 1;
+  min-width: 150px;
+  padding: 0 8px;
+  display: flex;
+ margin-bottom: 16px;
+}
+
+.my-form label {
+  
+  margin-bottom: 4px;
+  margin-right: 40px;
+  color: #4d5053;
+}
+.my-form input {
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px; /* Curved corners */
+  border: 1px solid #ccc; /* Border styling */
+  margin-bottom: 8px; /* Gap between fields */
+}
+
+
+.contact-fields {
+  display: flex;
+  gap: 16px; /* Gap between rows */
+}
+
+/* social handling */
+.social-alighn{
+  display: flex;
+}
+/* Styling for the form heading */
+.soc-handles {
+  font-family: 'inter', sans-serif;
+  color: #4d5053;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Styling for the form container */
+.social-hand {
+  display: flex;
+  gap: 16px; /* Gap between form rows */
+  margin-left: 20px; /* Adjust if needed */
+}
+
+/* Styling for each form column */
+.social-hand .form-column {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Styling for the labels */
+.social-hand .form-column label {
+  margin-right: 16px; /* Space between label and input */
+  min-width: 80px; /* Minimum width for labels, adjust as needed */
+}
+
+/* Styling for the input fields */
+.social-hand .form-column input {
+  flex: 1;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px; /* Curved corners */
+  border: 1px solid #ccc; /* Border styling */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+.social-hand .form-row{
+  flex-wrap: wrap;
+  
+}
