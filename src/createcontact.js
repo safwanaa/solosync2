@@ -56,12 +56,12 @@ return (
            <div className='contact-fields'>
          <div className="form-row">
         <div className="form-column">
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName">First Name&nbsp;&nbsp;&nbsp;</label>
           <input type="text" id="firstName" name="firstName" />
         
         </div>
        <div className="form-column">
-          <label htmlFor="leadSource">Lead Source</label>
+          <label htmlFor="leadSource">Lead Source&nbsp;</label>
           <input type="text" id="leadSource" name="leadSource" />
         </div>
         <div className="form-column">
@@ -69,14 +69,14 @@ return (
           <input type="date" id="dob" name="dob" />
         </div>
         <div className="form-column">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="email" id="email" name="email" />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-column">
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName">Last Name&nbsp;&nbsp;</label>
           <input type="text" id="lastName" name="lastName" />
         </div>
         <div className="form-column">
@@ -84,11 +84,11 @@ return (
           <input type="text" id="department" name="department" />
         </div>
         <div className="form-column">
-          <label htmlFor="phone">Phone</label>
+          <label htmlFor="phone">Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="tel" id="phone" name="phone" />
         </div>
         <div className="form-column">
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company">Company&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input type="text" id="company" name="company" />
         </div>
       </div>
@@ -97,31 +97,52 @@ return (
              
      <div className='soc-handles'>Social Handles</div>
      <form className='social-hand'>
-        <div className='social-alighn'>
-            <div className='form-row'>
-     <div className="form-column">
+         <div className='form-row'>
+          <div className="form-column">
           <label htmlFor="facebook">Facebook</label>
           <input type="text" id="facebook" name="facebook" />
           </div>
           </div>
-      
-        
        <div className="form-column">
           <label htmlFor="linkedin">Linkedin</label>
           <input type="text" id="linkedin" name="linkedin" />
         </div>
-       
-        <div className='form-row'>
+       <div className='form-row'>
         <div className="form-column">
           <label htmlFor="instagram">Instagram</label>
           <input type="text" id="instagram" name="instagram" />
         </div>
-        </div>
-        </div>
-
+       </div>
         </form>
-  
-  
+      <div className='address-infohead'>Address Information</div>
+      <form className='my-form'>
+           <div className='contact-fields'>
+         <div className="form-row">
+        <div className="form-column">
+          <label htmlFor="firstName">Street</label>
+          <input type="text" id="firstName" name="firstName" />
+        
+        </div>
+       <div className="form-column">
+          <label htmlFor="leadSource">State</label>
+          <input type="text" id="leadSource" name="leadSource" />
+        </div>
+      
+      </div>
+
+      <div className="form-row">
+        <div className="form-column">
+          <label htmlFor="lastName">City</label>
+          <input type="text" id="lastName" name="lastName" />
+        </div>
+        <div className="form-column">
+          <label htmlFor="department">Zip</label>
+          <input type="text" id="department" name="department" />
+        </div>
+     
+      </div>
+      </div>  
+    </form>
   
   </div>
    

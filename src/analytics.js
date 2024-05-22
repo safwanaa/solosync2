@@ -6,12 +6,13 @@ import 'chartjs-plugin-datalabels';
 
 
 
+
 export default function Analytics(){
   const doughnutChartContainer = useRef(null);
   const barChartContainer = useRef(null);
   const pieChartContainer = useRef(null);
   const nestedPieChartContainer = useRef(null);
-  const halfDoughnutChartContainer = useRef(null);
+  const doughnutChartContainer2 = useRef(null); // Add another useRef for the second doughnut chart
   
     
   useEffect(() => {
@@ -19,6 +20,7 @@ export default function Analytics(){
       type: 'doughnut',
       data: {
         // labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5', 'Label 6', 'Label 7'],
+        
         datasets: [{
           data: [10, 20, 30, 40, 50, 60, 70],
           backgroundColor: [
@@ -32,6 +34,7 @@ export default function Analytics(){
           ]
         }]
       },
+     
       options: {
         cutout: 70, // Adjust this value to remove padding in between
         responsive: true,
@@ -43,41 +46,47 @@ export default function Analytics(){
         
        
         },
-      },
+      }, 
     });
 
     // half doughnut
-   
-    const halfDoughnutChart = new Chart(halfDoughnutChartContainer.current, {
+    const doughnutChart2 = new Chart(doughnutChartContainer2.current, {
       type: 'doughnut',
       data: {
-        labels: ['Label 1', 'Label 2', 'Label 3'],
         datasets: [{
-          data: [2,2,2],
+          data: [20, 30],
           backgroundColor: [
             '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
-          ]
+            'grey',
+          ],
+          borderWidth: 0, // Set border width to 0 to hide the borders
+          borderAlign: 'inner', // Align borders inside to create smooth curves
+          tension: 0.4, // Adjust the tension to control the curvature of the lines
+          circumference: 180,
+          rotation: 270,
+       
+           
+         
         }]
       },
+      
       options: {
-        cutout: 40,
+       // Adjust the cutout value to make it a half doughnut chart
         responsive: true,
         plugins: {
           legend: {
             display: true,
             position: 'right',
+            aspectRatio: 2,
+        
           },
-          datalabels: {
-            display: false
-          }
+          layout: {
+            padding: 310, // Set padding to 0 to remove gaps
+            borderRadius:20
+          },
         },
-        circumference: Math.PI,
-        rotation: -Math.PI
-      }
+      },
     });
-
 
     // Bar Graph
     const barChart = new Chart(barChartContainer.current, {
@@ -86,7 +95,7 @@ export default function Analytics(){
         labels: ['Target', 'Achieved'], // X-axis labels 
         datasets: [{
           label: ['target','achieved'],
-          data: [100, 200], // Dummy data for target and achieved values
+          data: [100, 200], // Dummy data for target and achieved values  
           backgroundColor: [
             'rgba(0, 128, 0, 0.5)', // Red for target
             'rgba(255, 165, 0, 0.5)',// Red for target 
@@ -191,12 +200,12 @@ export default function Analytics(){
       barChart.destroy();
       pieChart.destroy();
       nestedPieChart.destroy();
-      halfDoughnutChart.destroy();
+      doughnutChart2.destroy();
 
     };
   }, []);
       
-        
+       
       
     
 
@@ -256,10 +265,12 @@ export default function Analytics(){
           </div>
          
           <div className="analytics4-card">
-           <div className="half-doughnut">
-           <canvas ref={halfDoughnutChartContainer}></canvas>
-           </div>
-         
+            <div className="leadgene-chart">Leads Generation Target - This Year&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="-1.5 -2.5 24 24">
+                <path fill="currentColor" d="m4.859 5.308l1.594-.488a1 1 0 0 1 .585 1.913l-3.825 1.17a1 1 0 0 1-1.249-.665L.794 3.413a1 1 0 1 1 1.913-.585l.44 1.441C5.555.56 10.332-1.035 14.573.703a9.381 9.381 0 0 1 5.38 5.831a1 1 0 1 1-1.905.608A7.381 7.381 0 0 0 4.86 5.308zm12.327 8.195l-1.775.443a1 1 0 1 1-.484-1.94l3.643-.909a.997.997 0 0 1 .61-.08a1 1 0 0 1 .84.75l.968 3.88a1 1 0 0 1-1.94.484l-.33-1.322a9.381 9.381 0 0 1-16.384-1.796l-.26-.634a1 1 0 1 1 1.851-.758l.26.633a7.381 7.381 0 0 0 13.001 1.25z" />
+              </svg></div>
+            <div className="half-doughnut">
+          <canvas ref={doughnutChartContainer2}></canvas>
+          </div>
           </div>
           <div className="analytics5-card">
           <div className="analyc5-head">Revenue Generation Target - This Year&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="-1.5 -2.5 24 24">

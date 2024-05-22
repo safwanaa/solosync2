@@ -1965,7 +1965,7 @@ th:not(:first-child) {
 /* create contact  */
 
 .creatcont-maincard{
-  height: calc(100vh - 60px);
+  height: calc(100vh - 5px);
   width:80%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2040,13 +2040,14 @@ th:not(:first-child) {
   font-weight: bold;
   margin-bottom: 10px;
   margin: 10px;
+  color:#4d5053
 }
 
 .image-circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2059,7 +2060,7 @@ th:not(:first-child) {
   height: 100%;
   object-fit: cover;
 }
-
+/* contact info */
 .contact-info{
   font-family: 'inter', sans-serif;
   color: #4d5053;
@@ -2134,6 +2135,7 @@ th:not(:first-child) {
 .social-hand .form-column label {
   margin-right: 16px; /* Space between label and input */
   min-width: 80px; /* Minimum width for labels, adjust as needed */
+  color: #4d5053;
 }
 
 /* Styling for the input fields */
@@ -2143,9 +2145,33 @@ th:not(:first-child) {
   box-sizing: border-box;
   border-radius: 8px; /* Curved corners */
   border: 1px solid #ccc; /* Border styling */
-  margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 0px; /* Remove bottom margin */
 }
 .social-hand .form-row{
   flex-wrap: wrap;
+  margin: 20px;
   
+}
+
+.address-infohead{
+  font-family: 'inter', sans-serif;
+  color: #4d5053;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.half-doughnut{
+  width: 50%;
+  height: 50%;
+
+ 
+}
+           
+
+.leadgene-chart{
+  padding-top: 20px;
+  margin-left: 20px;
+  font-family: 'inter',sans-serif;
+  font-size:smaller;
+  font-weight: bold;
 }
