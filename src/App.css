@@ -569,12 +569,15 @@
 .pie-flex {
   /* background-color: #7E64F1; */
   display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .piechart-align {
   /* background-color: brown; */
-  width: 60%;
+  width: 80%;
+
 }
 
 .ind-line {
@@ -610,6 +613,53 @@
   background-color: #F8C646;
 
 } 
+/* indication */
+.deal-indi {
+  display: flex;
+  align-items: center;
+  font-size: 17px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: 'inter',sans-serif;
+  margin-top: 30%;
+  color:#495057;
+}
+.contact-indi {
+  display: flex;
+  align-items: center;
+  font-size: 17px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: 'inter',sans-serif;
+  margin-top: 30%;
+  color:#495057;
+
+}
+.lead-indi{
+  display: flex;
+  align-items: center;
+  font-size: 17px; /* Adjust the font size as needed */
+  font-weight: bold;
+  font-family: 'inter',sans-serif;
+  margin-top: 30%;
+  color:#495057;
+
+}
+
+
+.deal-indi svg {
+  color: #7E64F1; /* Green color for deals */
+}
+
+.contact-indi svg {
+  color: #39EBFF /* Blue color for contacts */
+}
+
+.lead-indi svg {
+  color: #ff9800; /* Orange color for leads */
+}
+.homepie-indi{
+  display: flex;
+  margin-left: -110px;
+}
 
 /* responsive */
 @media only screen and (max-width: 600px) {
@@ -915,6 +965,89 @@
 .addformbutt svg{
   color: white;
 }
+/* home add task */
+.addtaskhome-maincard{
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:hidden;
+}
+.add-new-taskho{
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+}
+.all-headt-alighn{
+  display: flex;
+}
+.alltask-button{
+  display: flex;
+  padding-left: 45%;
+}
+
+.edit-buttont, .delete-icont {
+  margin-left: 8px; /* space between buttons */
+}
+
+.edit-buttont button, .delete-icont button {
+  background-color:#7E64F1; /* blue background color */
+  border: none; /* remove border */
+  color: #fff; /* white text color */
+  padding: 8px 12px; /* padding inside button */
+  border-radius: 4px; /* rounded corners */
+  cursor: pointer; /* pointer cursor on hover */
+  display: flex; /* flexbox for SVG alignment */
+  align-items: center; /* vertically center aligned */
+  margin-top: 22px;
+}
+
+.edit-buttont button:hover, .delete-icont button:hover {
+  background-color:#BFAAFF; /* darker blue on hover */
+}
+
+.delete-icont button {
+  background-color:#7E64F1; /* red background color */
+}
+.edit-buttont button{
+  padding: 8px 38px;
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+}
+
+.delete-icont button:hover {
+  background-color:#BFAAFF; /* darker red on hover */
+}
+
+.delete-icont svg {
+  fill: #fff; /* white fill for SVG */
+}
+
+.taskinner-card1{
+  width: 45vw;
+ height: calc(100vh - 650px);
+border-radius: 9px;
+box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+margin-top: 10px;
+padding: 70px;
+margin-left: 5px;
+padding-bottom: 20px;
+
+}
+
+.taskinner-card2{
+  width: 45vw;
+ height: calc(100vh - 400px);
+border-radius: 9px;
+box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
+margin-top: 10px;
+padding: 70px;
+margin-left: 5px;
+padding-bottom: 20px;
+
+}
 /* add new meet */
 .addmeet-maincard{
   height: calc(100vh - 60px);
@@ -927,6 +1060,7 @@
   overflow:hidden;
 
 }
+
 .add-new-meet{
   font-family: 'inter',sans-serif;
   font-weight: bold;
@@ -935,9 +1069,6 @@
 
 .all-headm-alighn{
   display: flex;
-
-  
-
 } 
 .allmeet-button{
   display: flex;
@@ -1677,14 +1808,19 @@ align-items: center;
   border-radius: 12px;
   box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
   margin-top: 30px;
-  /* background-color: #F8C646; */
   margin-left: 20px;
 }
-
 .half-doughnut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Center the container and add some vertical margin */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+}
+.half-doughnut canvas {
   width: 200px; /* Adjust width as needed */
   height: 150px; /* Adjust height as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  display: block;
 }
 
 .analytics5-card{
@@ -1865,16 +2001,36 @@ th:not(:first-child) {
   margin-top:-140px ;
   margin-left: 20px;
 }
+.indicationpie-alighn{
+  display: flex;
+}
+.pieindic-dot{
+  display: flex;
+  align-items: center;
+  margin-top: 70%;
+  font-size: 16px;  
+  font-weight: bold; 
+  color:#495057;
+}
+.pieindic1-dot {
+  display: flex;
+  align-items: center;
+  margin-top: 70%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4d5053; 
+}
 
-
-
-
-
-
-
+.pieindic-dot svg{
+ color: pink;
+}
+.pieindic1-dot svg {
+  color: rgb(157, 236, 38);
+}
 .tot-rev{
   margin-bottom: -200px;
   margin-left: 50%;
+  color: #4d5053; 
 
 }
 
@@ -2163,8 +2319,6 @@ th:not(:first-child) {
 .half-doughnut{
   width: 50%;
   height: 50%;
-
- 
 }
            
 
@@ -2175,3 +2329,5 @@ th:not(:first-child) {
   font-size:smaller;
   font-weight: bold;
 }
+
+

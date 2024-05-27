@@ -22,7 +22,7 @@ return (
 </div>
 </header>
    {/* main content */}
-
+    <div className='main-div'>
    <div className="creatcont-maincard">
     <div className='headcreate-butt'>
    <div className="add-new-contact"><h2>Create Contact</h2></div>
@@ -145,7 +145,7 @@ return (
     </form>
   
   </div>
-   
+  </div>
 
   
  </>

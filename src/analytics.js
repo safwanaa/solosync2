@@ -354,13 +354,23 @@ export default function Analytics(){
           <div className="stacked-piechart">
           <canvas ref={nestedPieChartContainer}></canvas>
           </div>
+          
           <div className="tot-rev">
           <div className="card8-1">Total Revenue &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;$78,000</div>
           <div className="card8-2">Collected Revenue &nbsp;:&nbsp;$78,000</div>
           <div className="card8-3">Pending Revenue &nbsp;&nbsp;&nbsp;:&nbsp;$28,000</div>
+          <div className="indicationpie-alighn">
+          <div className="pieindic-dot"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M9.875 7.5a2.375 2.375 0 1 1-4.75 0a2.375 2.375 0 0 1 4.75 0" />
+</svg>collected</div>
+          <div className="pieindic1-dot"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M9.875 7.5a2.375 2.375 0 1 1-4.75 0a2.375 2.375 0 0 1 4.75 0" />
+</svg>pending</div>
+</div>
         </div>    
         </div>
-          </div>
+          </div> 
+           
 
             </div>
             

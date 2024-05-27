@@ -128,7 +128,7 @@ const App = () => {
                   <ResponsiveContainer width="80%" height={180}>
                     <LineChart data={data}>
                       {/* Customizing grid lines */}
-                      <CartesianGrid stroke="#ccc" />
+                      {/* <CartesianGrid stroke="#ccc" /> */}
 
                       {/* Customizing X-axis */}
                       <XAxis dataKey="name" stroke="#8884d8" />
@@ -219,10 +219,19 @@ const App = () => {
                   <div className='custom-hr1'>&nbsp;</div>
                   <div className='custom-hr2'>&nbsp;</div>
                   <div className='custom-hr3'>&nbsp;</div>
-
+                  <div className='homepie-indi'>
+                  <div className="deal-indi"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M9.875 7.5a2.375 2.375 0 1 1-4.75 0a2.375 2.375 0 0 1 4.75 0" />
+</svg>deal</div>
+          <div className="contact-indi"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M9.875 7.5a2.375 2.375 0 1 1-4.75 0a2.375 2.375 0 0 1 4.75 0" />
+</svg>contacts</div>
+<div className="lead-indi"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 15 15">
+	<path fill="currentColor" d="M9.875 7.5a2.375 2.375 0 1 1-4.75 0a2.375 2.375 0 0 1 4.75 0" />
+</svg>lead</div>
+</div>
                 </div>
-
-              </div>
+                </div>
             </div>
 
 

@@ -23,20 +23,25 @@ return (
    {/* main content */}
 
    <div className="addtaskhome-maincard">{/* main card */}
-   
-    <div className="add-new-taskh"><h2>Task 1</h2></div>
-    <div className="allmeet-button">{/* alighning both edit and delete button*/}
-   <div className="edit-button">{/* edit button*/}
-    <button className="edit-button">Edit</button>
+    <div className="all-headt-alighn">
+    <div className="add-new-taskho"><h2>Task 1</h2></div>
+    <div className="alltask-button">{/* alighning both edit and delete button*/}
+   <div className="edit-buttont">{/* edit button*/}
+    <button className="edit-buttont">Edit</button>
    </div>
-   <div className="delete-icon">{/* delete icon */}
-    <button className="delete-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+   <div className="delete-icont">{/* delete icon */}
+    <button className="delete-icont"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 	<path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z" />
 </svg></button>
    </div>
    </div>
+   </div>
 
    <div className="taskinner-card1">
+    <div className="task-priority">priority<h6>High</h6></div>
+    <div className="task-duedate">Due Date<h6>12/05/2024</h6></div>
+    <div className="task-status">Not completed<h6>Not complted</h6></div>
+    <div className="task-contact">Dvid Luca<h6>david luka</h6></div>
      </div>
    <div className="taskinner-card2">
     </div>
