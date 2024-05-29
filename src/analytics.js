@@ -152,10 +152,10 @@ export default function Analytics(){
           label: ['Data 1', 'Data 2'],
           data: [150, 300], // Dummy data for the two datasets
           backgroundColor: [
-            'rgba(255, 99, 132, 0.5)', // Red for Data 1
+           'transparent',
             'rgba(54, 162, 235, 0.5)', // Blue for Data 2
           ],
-          borderWidth: 1,
+          borderWidth: 0,
         }],
       },
       options: {
@@ -178,9 +178,9 @@ export default function Analytics(){
           data: [150, 300], // Dummy data for the nested datasets
           backgroundColor: [
             'rgba(255, 205, 86, 0.5)', // Yellow for Nested Data 1
-            'rgba(75, 192, 192, 0.5)', // Green for Nested Data 2
+             'transparent',
           ],
-          borderWidth: 1,
+          borderWidth: 0,
         }],
       },
       options: {

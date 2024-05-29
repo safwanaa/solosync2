@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Modal, Button, Form } from 'react-bootstrap';
+import { Modal, Button, Form } from 'react-bootstrap';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -8,28 +8,16 @@ export default function Meeting(){
 
     
     const [recordsPerPage, setRecordsPerPage] = useState(10);
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const togglePopup = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    const handleSave = (e) => {
-      e.preventDefault();
-      // Logic to save the new meeting
-      togglePopup();
-    };
+    const [showModal, setShowModal] = useState(false);
     
-    // const [showModal, setShowModal] = useState(false);
-    
-    // const handleShowModal = () => setShowModal(true);
-    // const handleCloseModal = () => setShowModal(false);
+    const handleShowModal = () => setShowModal(true);
+    const handleCloseModal = () => setShowModal(false);
 
-    // const handleSave = (e) => {
-    //     e.preventDefault();
-    //     // Logic to save the new meeting
-    //     handleCloseModal();
-    // };
+    const handleSave = (e) => {
+        e.preventDefault();
+        // Logic to save the new meeting
+        handleCloseModal();
+    };
     const handleRecordsPerPageChange = (value) => {
         setRecordsPerPage(value);
         // You can perform additional actions here, like fetching data for the new page size
@@ -79,7 +67,7 @@ export default function Meeting(){
 </svg>Meetings
    <div className="allighncont">
    <div className="addformbutt">
-   <button onClick={togglePopup}>
+   <button onClick={handleShowModal}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
                     <path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
                   </svg>Add Meeting
@@ -192,46 +180,8 @@ export default function Meeting(){
    
     </div>
     </div>
-    {isOpen && (
-        <div className="popup">
-          <div className="popup-inner">
-            <h2>New Meeting</h2>
-            <form onSubmit={handleSave}>
-              <label>
-                Meeting Title:
-                <input type="text" name="title" required />
-              </label>
-              <label>
-                Location:
-                <input type="text" name="location" required />
-              </label>
-              <label>
-                From:
-                <input type="datetime-local" name="from" required />
-              </label>
-              <label>
-                To:
-                <input type="datetime-local" name="to" required />
-              </label>
-              <label>
-                Host:
-                <input type="text" name="host" required />
-              </label>
-              <label>
-                Participants:
-                <input type="text" name="participants" required />
-              </label>
-              <label>
-                Description:
-                <textarea name="description" rows="3" required />
-              </label>
-              <button type="submit">Save</button>
-              <button type="button" onClick={togglePopup}>Cancel</button>
-            </form>
-          </div>
-        </div>
-         )}
-    {/* <Modal show={showModal} onHide={handleCloseModal}>
+
+    <Modal show={showModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title> Meeting information</Modal.Title>
                 </Modal.Header>
@@ -274,7 +224,7 @@ export default function Meeting(){
                         </button>
                     </Form>
                 </Modal.Body>
-            </Modal> */}
+            </Modal>
      
     </>
     )

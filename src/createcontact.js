@@ -1,5 +1,5 @@
 
-import React, { useState, } from 'react';
+import React, { useState,Link } from 'react';
 import Companypic from './assets/company.jpg';
 import Contactpic from './assets/image.jpg';
 
@@ -22,7 +22,7 @@ return (
 </div>
 </header>
    {/* main content */}
-    <div className='main-div'>
+    <div className='main-div-createcont'>
    <div className="creatcont-maincard">
     <div className='headcreate-butt'>
    <div className="add-new-contact"><h2>Create Contact</h2></div>

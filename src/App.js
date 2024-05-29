@@ -16,6 +16,7 @@ import AddTask from './addtask';
 import AddMeeting from './addmeeting';
 import AddTaskHome from './addtaskhome';
 import CreateContact from './createcontact';
+import CreateContactPro from './createcontactpro';
 
 
 
@@ -84,6 +85,8 @@ function App() {
       <Route path="/addmeeting" element={<AddMeeting />} />
       <Route path="/addtaskhome" element={<AddTaskHome />} />
       <Route path="/createcontact" element={<CreateContact />} />
+      <Route path="/createcontactpro" element={<CreateContactPro />} />
+
 
 
     

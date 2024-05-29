@@ -38,12 +38,65 @@ return (
    </div>
 
    <div className="taskinner-card1">
-    <div className="task-priority">priority<h6>High</h6></div>
-    <div className="task-duedate">Due Date<h6>12/05/2024</h6></div>
-    <div className="task-status">Not completed<h6>Not complted</h6></div>
-    <div className="task-contact">Dvid Luca<h6>david luka</h6></div>
-     </div>
+    <div className="closet-itemsalighn">
+   <div className="addtask-container"> 
+    <div className="task-item">
+        <span className="task-label">Priority</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;High</h4>
+      </div>
+      <div className="task-item">
+        <span className="task-label">Due Date</span>
+        <h4 className="task-value">12/05/2024</h4>
+      </div>
+      <div className="task-item">
+        <span className="task-label">Status</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not completed</h4>
+      </div>
+      <div className="task-item">
+        <span className="task-label">Contact</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;David Luca</h4>
+      </div>
+      </div>
+      {/* <button className="close-task"> close task</button> */}
+   </div>
+   </div>
    <div className="taskinner-card2">
+    <div className="addtask-information">Task Information</div>
+    <div className="task-item1">
+        <span className="task-label">Subject</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Task 1</h4>
+      </div>
+      <div className="task-item1">
+        <span className="task-label">Due Date</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;12/05/2024</h4>
+      </div>
+      <div className="task-item1">
+        <span className="task-label">Status</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Not completed</h4>
+      </div>
+      <div className="task-item1">
+        <span className="task-label">Contact</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David Luca</h4>
+      </div>
+      <div className="task-item1">
+        <span className="task-label">Priority</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High </h4>
+      </div><div className="task-item1">
+        <span className="task-label">Created By</span>
+        <h4 className="task-value">&nbsp;&nbsp;Novov-x 10/5/2024 9:38 AM</h4>
+      </div><div className="task-item1">
+        <span className="task-label">Modified By</span>
+        <h4 className="task-value">Novov-x 10/5/2024 9:38 AM</h4>
+      </div><div className="task-item1">
+        <span className="task-label">Contact</span>
+        <h4 className="task-value"> &nbsp;&nbsp;&nbsp;&nbsp;-</h4> 
+      </div><div className="task-item1">
+        <span className="task-label">Contact</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;&nbsp;-</h4>
+      </div><div className="task-item1">
+        <span className="task-label">Contact</span>
+        <h4 className="task-value">&nbsp;&nbsp;&nbsp;-</h4>
+      </div>
     </div>
 <div className="meetinner-card4">
 <div className="profile-container">

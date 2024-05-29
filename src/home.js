@@ -125,6 +125,9 @@ const App = () => {
               </div>
               <div className='linechart-container'>
                 <div className='linechart-cell'>
+                  <div className='border-line'></div><br/>
+                  <div className='border-line1'></div> <br/>
+                   <div className='border-line2'></div>
                   <ResponsiveContainer width="80%" height={180}>
                     <LineChart data={data}>
                       {/* Customizing grid lines */}
