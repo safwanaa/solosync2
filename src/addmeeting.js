@@ -11,7 +11,7 @@ export default function AddMeeting(){
    
 return (
     <>
-         <header className='header'>
+         <header className='mainn-header'>
         <div className='task-icon'>
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">

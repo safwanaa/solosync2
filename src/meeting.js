@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -8,47 +7,22 @@ export default function Meeting(){
 
     
     const [recordsPerPage, setRecordsPerPage] = useState(10);
-    const [showModal, setShowModal] = useState(false);
-    
-    const handleShowModal = () => setShowModal(true);
-    const handleCloseModal = () => setShowModal(false);
+    const [showPopup, setShowPopup] = useState(false);   
 
+    const handleShowPopup = () => setShowPopup(true);
+    const handleClosePopup = () => setShowPopup(false);
+
+   
     const handleSave = (e) => {
         e.preventDefault();
         // Logic to save the new meeting
-        handleCloseModal();
+        handleClosePopup();
     };
     const handleRecordsPerPageChange = (value) => {
         setRecordsPerPage(value);
         // You can perform additional actions here, like fetching data for the new page size
     };
-    document.addEventListener("DOMContentLoaded", function() {
-        const actionButton = document.getElementById("actionButton");
-        const popup = document.getElementById("popup");
-        const selectAllButton = document.getElementById("selectAllButton");
-        const deleteAllButton = document.getElementById("deleteAllButton");
-    
-        actionButton.addEventListener("click", function() {
-            popup.style.display = "block";
-        });
-    
-        selectAllButton.addEventListener("click", function() {
-            // Handle select all logic
-            popup.style.display = "none"; // Hide popup after action
-        });
-    
-        deleteAllButton.addEventListener("click", function() {
-            // Handle delete all logic
-            popup.style.display = "none"; // Hide popup after action
-        });
-    
-        // Close popup when clicking outside of it
-        document.addEventListener("click", function(event) {
-            if (!popup.contains(event.target) && event.target !== actionButton) {
-                popup.style.display = "none";
-            }
-        });
-    });
+  
 
    
 
@@ -59,7 +33,7 @@ export default function Meeting(){
 
     return (
     <>
-         <header className='header'>
+         <header className='mainn-header'>
         <div className='task-icon'>
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -67,7 +41,7 @@ export default function Meeting(){
 </svg>Meetings
    <div className="allighncont">
    <div className="addformbutt">
-   <button onClick={handleShowModal}>
+   <button onClick={handleShowPopup}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
                     <path fill="currentColor" d="M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z" />
                   </svg>Add Meeting
@@ -181,50 +155,36 @@ export default function Meeting(){
     </div>
     </div>
 
-    <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title> Meeting information</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form onSubmit={handleSave}>
-                        <Form.Group className="mb-3" controlId="formMeetingTitle">
-                            <Form.Label></Form.Label>
-                            <Form.Control type="text" placeholder="New Meeting" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formLocation">
-                            <Form.Label></Form.Label>
-                            <Form.Control type="text" placeholder="Enter location" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formFrom">
-                            <Form.Label>from</Form.Label>
-                            <Form.Control type="datetime-local" placeholder='from' required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formTo">
-                            <Form.Label>To</Form.Label>
-                            <Form.Control type="datetime-local" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formHost">
-                            <Form.Label>Host</Form.Label>
-                            <Form.Control type="text" placeholder="Enter host name" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formParticipants">
-                            <Form.Label>Participants</Form.Label>
-                            <Form.Control type="text" placeholder="Enter participants" required />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formDescription">
-                            <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} placeholder="Enter description" required />
-                        </Form.Group>
-                       &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
-                        <button className='button1-sav' type="submit">
-                            Save
-                        </button>  &nbsp;  &nbsp;  &nbsp;
-                        <button className="button2-can" type="submit">
-                            Cancel
-                        </button>
-                    </Form>
-                </Modal.Body>
-            </Modal>
+   {/* Custom Popup Form */}
+   {showPopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                       
+                        <h2>Meeting Information</h2>
+                        <div>
+                        <form onSubmit={handleSave}>
+                            <label>Meeting Title</label>
+                            <input type="text" placeholder="New Meeting" required />
+                            <label>Location</label>
+                            <input type="text" placeholder="Enter location" required />
+                            <label>From</label>
+                            <input type="datetime-local" required />
+                            <label>To</label>
+                            <input type="datetime-local" required />
+                            <label>Host</label>
+                            <input type="text" placeholder="Enter host name" required />
+                            <label>Participants</label>
+                            <input type="text" placeholder="Enter participants" required />
+                            <label>Description</label>
+                            <textarea rows="3" placeholder="Enter description" required></textarea>
+                            <button type="submit">Save</button>
+                            <button type="button" onClick={handleClosePopup}>Cancel</button>
+                        </form>
+                       
+                    </div>
+                </div>
+                </div>
+            )}
      
     </>
     )

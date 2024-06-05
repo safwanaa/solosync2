@@ -150,7 +150,7 @@ export default function Analytics(){
         // labels: ['Data 1', 'Data 2'], // Labels for the two datasets
         datasets: [{
           label: ['Data 1', 'Data 2'],
-          data: [150, 300], // Dummy data for the two datasets
+          data: [150, 290], // Dummy data for the two datasets
           backgroundColor: [
            'transparent',
             'rgba(54, 162, 235, 0.5)', // Blue for Data 2
@@ -175,7 +175,7 @@ export default function Analytics(){
       // Labels for the nested datasets
         datasets: [{
           label: ['Nested Data 1', 'Nested Data 2'],
-          data: [150, 300], // Dummy data for the nested datasets
+          data: [170, 330], // Dummy data for the nested datasets
           backgroundColor: [
             'rgba(255, 205, 86, 0.5)', // Yellow for Nested Data 1
              'transparent',
@@ -211,7 +211,7 @@ export default function Analytics(){
 
     return (
     <>
-         <header className='header'>
+         <header className='mainn-header'>
         <div className='task-icon'>
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -348,11 +348,13 @@ export default function Analytics(){
           <div className="analyc8-head">Revenue Collection <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="-1.5 -2.5 24 24">
                 <path fill="currentColor" d="m4.859 5.308l1.594-.488a1 1 0 0 1 .585 1.913l-3.825 1.17a1 1 0 0 1-1.249-.665L.794 3.413a1 1 0 1 1 1.913-.585l.44 1.441C5.555.56 10.332-1.035 14.573.703a9.381 9.381 0 0 1 5.38 5.831a1 1 0 1 1-1.905.608A7.381 7.381 0 0 0 4.86 5.308zm12.327 8.195l-1.775.443a1 1 0 1 1-.484-1.94l3.643-.909a.997.997 0 0 1 .61-.08a1 1 0 0 1 .84.75l.968 3.88a1 1 0 0 1-1.94.484l-.33-1.322a9.381 9.381 0 0 1-16.384-1.796l-.26-.634a1 1 0 1 1 1.851-.758l.26.633a7.381 7.381 0 0 0 13.001 1.25z" />
               </svg></div>
+              <div className="both-piechart">
           <div className="analytics-piechart">
           <canvas ref={pieChartContainer}></canvas>
           </div>
           <div className="stacked-piechart">
           <canvas ref={nestedPieChartContainer}></canvas>
+          </div>
           </div>
           
           <div className="tot-rev">

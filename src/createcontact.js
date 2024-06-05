@@ -1,5 +1,6 @@
 
-import React, { useState,Link } from 'react';
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import Companypic from './assets/company.jpg';
 import Contactpic from './assets/image.jpg';
 
@@ -12,7 +13,7 @@ export default function CreateContact(){
    
 return (
     <>
-         <header className='header'>
+         <header className='mainn-header'>
         <div className='task-icon'>
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -28,7 +29,7 @@ return (
    <div className="add-new-contact"><h2>Create Contact</h2></div>
    <div className='create-bothbuttalighn'>
    <div className="savecrt-button">
-    <button>Save</button>
+   <Link to="/createcontactpro"> <button>Save</button></Link>
    </div>
    <div className="cancelcrt-button">
     <button>Cancel</button>

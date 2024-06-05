@@ -1,3 +1,4 @@
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -100,7 +101,7 @@
 /* header */
 /* Header.css */
 
-.header {
+.mainn-header {
   grid-area: header;
   background-color: white;
   color: #333;
@@ -2113,27 +2114,32 @@ th:not(:first-child) {
 }
 
 .analytics-piechart {
-  width: 35%; /* Set width according to your preference */
-  height: 45%; /* Set height according to your preference */
+  width: 100%; /* Set width according to your preference */
+  max-width: 35%;
+  height: 44%; /* Set height according to your preference */
   position: relative;
   box-sizing: border-box;
-  margin-top: 30px;
+  margin-top:40px;
 
 
 }
 
 /* Additional styling for the canvas element */
+.both-piechart{
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  margin-bottom: -100px;
+}
 .piechart canvas {
   display: block;
   margin: 0 auto; /* Center the canvas within its container */
 }
 
 .stacked-piechart {
-  width: 33%; /* Set width according to your preference */
-  height: 30%; /* Set height according to your preference */
-  margin-top:-140px ;
-  margin-left: 20px;
-  
+  width: 40%; /* Set width according to your preference */
+  height: 33%; /* Set height according to your preference */
+  margin-top:-215px ;
+  margin-left: -10px;
 }
 .indicationpie-alighn{
   display: flex;
@@ -2186,7 +2192,7 @@ th:not(:first-child) {
 }
 
 /* Style the modal header */
-.modal-header {
+ .modal-header {
   background-color: #f8f9fa;
   border-bottom: 1px solid #dee2e6;
 }
@@ -2233,8 +2239,70 @@ th:not(:first-child) {
 /* Style the modal footer */
 .modal-footer {
   border-top: 1px solid #dee2e6;
+} 
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup form label {
+  margin-top: 10px;
+}
+
+.popup form input,
+.popup form textarea {
+  margin-top: 5px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.popup form button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.popup form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.popup form button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+  margin-left: 10px;
+}
 .button1-sav{
   background-color: #7E64F1;
   box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
@@ -2465,7 +2533,7 @@ th:not(:first-child) {
 }
 
 /* create contact profile */
-.editcontbutt-profile {
+.editcontbutt-profile button{
   background-color: #7E64F1; /* Green background */
   border: none; /* Remove borders */
   color: white; /* White text */
@@ -2475,4 +2543,241 @@ th:not(:first-child) {
   cursor: pointer; /* Add a pointer cursor on hover */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  margin-left: 1000%;
+}
+.contactpro-alighn{
+  display: flex;
+  
+
+}
+
+.creatcontpro-maincard{
+  height: calc(100vh - 5px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:hidden;
+}
+/* profilepic2 */
+.profile-container2 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  max-width: 300px;
+  margin-right: 20px;
+}
+
+.profile-image2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.profile-name2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.createcontpro-card1{
+  width: calc(50% - -550px);
+  height: calc(47vh - 200px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.profile-item {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+  margin-left: 100px;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+  margin-right: 10px;
+}
+
+.value {
+ font-weight: bold;
+}
+.profile-item:nth-child(1) .value {
+  margin-left: 5.6%;
+}
+
+.profile-item:nth-child(2) .value {
+  margin-left: 5%;
+
+}
+
+.profile-item:nth-child(3) .value {
+  margin-left: 1%;
+}
+
+.profile-item:nth-child(4) .value {
+  margin-left: 6%;
+}
+.createcontpro-card2{
+  width: calc(50% - -550px);
+  height: calc(47vh - 210px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  margin-left: 20px;
+} 
+/* Social Profiles Styles */
+.social-profiles {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-row {
+  display: flex;
+  
+}
+
+.social-logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.image-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.text-facebook,
+.text-instagram,
+.text-twitter,
+.text-linkedin {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  color: #333;
+}
+
+.image-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-pic {
+  width: 100%;
+  height: auto;
+}
+
+.text-facebook {
+  color: #3b5998; /* Facebook specific color */
+}
+
+.text-instagram {
+  color: #e4405f; /* Instagram specific color */
+}
+
+.text-twitter {
+  color: #55acee; /* Twitter specific color */
+}
+
+.text-linkedin {
+  color: #0077b5; /* LinkedIn specific color */
+}
+
+
+.createcontpro-card3{
+  width: calc(50% - -550px);
+  height: calc(47vh - 150px);
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 2px rgba(59, 58, 1, 0.233);
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.profile2-item {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 16px;
+  
+  color: #333;
+  margin-left: 10%;
+}
+
+.label1 {
+  font-weight: bold;
+  color: #555;
+}
+
+.value-1 {
+  color: #0a0a0a;
+  font-weight:bold;
+  margin-left: 60px;
+}
+
+/* overview timeline  */
+.view-switch {
+  display: flex;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.view-switch button {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-switch button.active {
+  background-color: #7E64F1;
+  color: white;
+  z-index: 3; /* Active button on top */
+
+}
+
+.view-switch button:first-child {
+  border-radius: 20px;
+  margin-right: -10px; /* Adjust overlap as needed */
+}
+
+.view-switch button:last-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 10%;
+}
+
+.view-switch button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.view-switch button:not(:last-child) {
+  border-right: none;
+}
+
+.view-switch button:hover {
+  background-color: #ddd;
+}
+/* Timeline Content Styles */
+.timeline-content {
+  padding: 20px;
 }

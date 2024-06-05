@@ -69,8 +69,7 @@ function App() {
             <li>
               <Link to="/analytics">analytics</Link>
             </li>
-
-            </ul>
+       </ul>
       <Routes>
       <Route index element={<Home />} />
       <Route path="/home" element={<Home />} />

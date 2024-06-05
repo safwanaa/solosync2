@@ -1,8 +1,6 @@
 import Header from "./header";
 import React, { useState, } from 'react';
 import Switch from 'react-switch';
-import { Button, Form, Card, Modal } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -10,29 +8,12 @@ import { Button, Form, Card, Modal } from 'react-bootstrap';
 
 export default function AddTask(){
   const [reminder, setReminder] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [reminderDate, setReminderDate] = useState('');
-  const [reminderTime, setReminderTime] = useState('');
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+ 
 
-  const handleSave = (e) => {
-    e.preventDefault();
-    // Logic to save the new meeting
-    handleCloseModal();
-  };
-
-  const handleReminderSave = (e) => {
-    e.preventDefault();
-    // Logic to save the reminder
-    console.log('Reminder Date:', reminderDate);
-    console.log('Reminder Time:', reminderTime);
-    setReminder(false); // Optionally turn off the switch after saving
-  };
    
 return (
     <>
-         <header className='header'>
+         <header className='mainn-header'>
         <div className='task-icon'>
           <div className='header-left'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -88,12 +69,13 @@ return (
   <div class="form-group">
     <label for="reminder">Reminder:</label>
     <input type="text" id="reminder" name="reminder" class="underline"/>
-     <div className="toggle-switch">
+     <div className="toggle-switch ">
                 <Switch
                   onChange={checked => setReminder(checked)}
                   checked={reminder}
                   onColor="2ecc71"
                   onHandleColor="ffffff"
+                  offColor="#cccccc" // Light grey color when switched off
                   handleDiameter={20}
                   uncheckedIcon={false}
                   checkedIcon={false}
@@ -104,26 +86,8 @@ return (
                   className="react-switch"
                   id="material-switch"
                 />
-                 {reminder && (
-                  <Card style={{ width: '18rem', marginTop: '10px' }}>
-                    <Card.Body>
-                      <Form onSubmit={handleReminderSave}>
-                        <Form.Group controlId="formReminderDate">
-                          <Form.Label>Date</Form.Label>
-                          <Form.Control type="date" value={reminderDate} onChange={(e) => setReminderDate(e.target.value)} required />
-                        </Form.Group>
-                        <Form.Group controlId="formReminderTime">
-                          <Form.Label>Time</Form.Label>
-                          <Form.Control type="time" value={reminderTime} onChange={(e) => setReminderTime(e.target.value)} required />
-                        </Form.Group>
-                        <div className="d-flex justify-content-between mt-3">
-                          <Button variant="secondary" onClick={() => setReminder(false)}>Cancel</Button>
-                          <Button type="submit" variant="primary">Done</Button>
-                        </div>
-                      </Form>
-                    </Card.Body>
-                  </Card>
-                )}
+             
+             
               </div>
   </div>
 </form>
@@ -133,49 +97,7 @@ return (
 <input id="description" name="description" class="description-field"/>
   </div>
     </div>
-    <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Head closeButton>
-          <Modal.Title>Meeting Information</Modal.Title>
-        </Modal.Head>
-        <Modal.Body>
-          <Form onSubmit={handleSave}>
-            <Form.Group className="mb-3" controlId="formMeetingTitle">
-              <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="New Meeting" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formLocation">
-              <Form.Label>Location</Form.Label>
-              <Form.Control type="text" placeholder="Enter location" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formFrom">
-              <Form.Label>From</Form.Label>
-              <Form.Control type="datetime-local" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formTo">
-              <Form.Label>To</Form.Label>
-              <Form.Control type="datetime-local" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formHost">
-              <Form.Label>Host</Form.Label>
-              <Form.Control type="text" placeholder="Enter host name" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formParticipants">
-              <Form.Label>Participants</Form.Label>
-              <Form.Control type="text" placeholder="Enter participants" required />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formDescription">
-              <Form.Label>Description</Form.Label>
-              <Form.Control as="textarea" rows={3} placeholder="Enter description" required />
-            </Form.Group>
-            <Button className='button1-sav' type="submit">
-              Save
-            </Button>
-            <Button className="button2-can" onClick={handleCloseModal}>
-              Cancel
-            </Button>
-          </Form>
-        </Modal.Body>
-      </Modal>
+    
  </>
     )
 } 
