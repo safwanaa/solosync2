@@ -8,8 +8,17 @@ import Switch from 'react-switch';
 
 export default function AddTask(){
   const [reminder, setReminder] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
  
 
+  const handleToggle = (checked) => {
+    setReminder(checked);
+    if (checked) {
+      setShowPopup(true);
+    } else {
+      setShowPopup(false);
+    }
+  };
    
 return (
     <>
@@ -66,12 +75,59 @@ return (
       <option value="completed">Completed</option>
     </select>
   </div>
+  </form>
+  {/* Popup */}
+  {showPopup && (
+            <div className="reminder-popup">
+              <div className="popup-message">
+                <div className="popup-icon">
+                 
+                </div>
+                <div className="popup-text">
+                <div className="on-button">On&nbsp; <button className="date-button">04/04/2024&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+	<g fill="none">
+		<path fill="currentColor" d="M2 9c0-1.886 0-2.828.586-3.414C3.172 5 4.114 5 6 5h12c1.886 0 2.828 0 3.414.586C22 6.172 22 7.114 22 9c0 .471 0 .707-.146.854C21.707 10 21.47 10 21 10H3c-.471 0-.707 0-.854-.146C2 9.707 2 9.47 2 9m0 9c0 1.886 0 2.828.586 3.414C3.172 22 4.114 22 6 22h12c1.886 0 2.828 0 3.414-.586C22 20.828 22 19.886 22 18v-5c0-.471 0-.707-.146-.854C21.707 12 21.47 12 21 12H3c-.471 0-.707 0-.854.146C2 12.293 2 12.53 2 13z" />
+		<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7 3v3m10-3v3" />
+	</g>
+</svg></button></div>
+       <div className="at-button">at&nbsp;<button className="time-button">3:50 PM<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
+	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+		<path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0" />
+		<path d="M12 7v5l3 3" />
+	</g>
+</svg>
+      </button>
+      </div> 
+       </div>
+       </div>
+    
+      <div className="notify-options">
+        Notify
+           <select className="custom-select">
+          {/* Options for pickup named drop box */}
+          <option value=""></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+      
+
+            <div className="boredr">&nbsp;</div> 
+             
+              <div className="popup-buttons">
+                <button className="toggle-cancel" onClick={() => setShowPopup(false)}>Cancel</button>
+                <button className="toggle-save">Save</button>
+              </div>
+            </div>
+          )}
+
   <div class="form-group">
     <label for="reminder">Reminder:</label>
     <input type="text" id="reminder" name="reminder" class="underline"/>
      <div className="toggle-switch ">
                 <Switch
-                  onChange={checked => setReminder(checked)}
+                 onChange={handleToggle}
                   checked={reminder}
                   onColor="2ecc71"
                   onHandleColor="ffffff"
@@ -90,7 +146,7 @@ return (
              
               </div>
   </div>
-</form>
+
 
 <div class="description-info">Description Information</div>
 <label for="description">Description:</label>

@@ -1191,6 +1191,7 @@ padding-bottom: 20px;
   margin-top: 25px; 
   margin-left:17%;
   overflow:hidden;
+ 
 
 }
 
@@ -1296,17 +1297,23 @@ padding-bottom: 20px;
     font-weight: bold;
     font-size: large;
     color: rgb(68, 66, 66);
+    margin-top: -30px;
+
+
 }
 .add-noparti{
    color: rgb(107, 107, 107);
+   margin-top: 30px;
    
  
 }
 
 .partihead-butt{
   display: flex;
+  margin-top: -30px;
 }
 .addparti-button {
+  margin-top: -30px;
   background-color:#7E64F1; 
   color: #fff; /* White text color */
   margin-left: 80%;
@@ -1315,13 +1322,70 @@ padding-bottom: 20px;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover and active states */
-
-
 }
 
 .addparti-button:hover {
   background-color:#BFAAFF/* Darker blue on hover */
 }
+.popup-cardmeet {
+  height: 150px;
+  width: 250px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  margin-left: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  margin-top:-60px ;
+}
+.name-options {
+  display: flex;
+  flex-direction: column;
+}
+.name-text{
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: -20px;
+  margin-top: 20px; 
+  font-weight: bold;
+}
+
+.name-select{
+  margin-left: 50%;
+  border: none;
+  appearance: none; /* Remove default arrow */
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+}
+.name-select option {
+  font-size: 16px;
+  width: 20px;
+}
+
+.popup-buttonsmeet{
+  margin-top: 70px;
+}
+.cancel-buttonm{
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-left: 45%;
+  margin-bottom: -40px;
+  background: #ddd;
+  box-shadow: rgb(26, 25, 25);
+  border: none;
+}
+ .save-buttonm {
+  padding: 6px 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  margin-bottom: -40px;
+  background: #7E64F1;
+  color: white;
+  border: none;
+  box-shadow: rgb(26, 25, 25);
+}
+
+
   .meetinner-card3{
     width: 45vw;
     height: calc(100vh - 700px);
@@ -2184,141 +2248,124 @@ th:not(:first-child) {
 
 
 /* Meeting.css */
-
-/* Adjust the size of the modal */
-.modal-dialog {
-  max-width: 500px;
-  margin: 10% auto;
-}
-
-/* Style the modal header */
- .modal-header {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.modal-title {
-  color: #343a40;
-  font-weight: bold;
-}
-
-/* Underline style for form fields */
-.modal-body .form-control {
-  border: none;
-  border-bottom: 2px solid #ced4da;
-  border-radius: 0;
-  box-shadow: none;
-  padding-left: 0;
-  padding-right: 0;
-  padding: -0px;
-}
-
-.modal-body .form-control:focus {
-  border-bottom: 2px solid #80bdff;
-  box-shadow: none;
-}
-
-.modal-body .form-label {
-  font-weight: 600;
-  color: #495057;
-}
-
-/* Style the button */
-.modal-body .btn-primary {
-  background-color: #7E64F1;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-
-.modal-body .btn:hover {
-  background-color: #7E64F1;
-
-}
-
-/* Style the modal footer */
-.modal-footer {
-  border-top: 1px solid #dee2e6;
-} 
-.popup-overlay {
+/* Main CSS for the popup and its content */
+.popup {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-}
+  /* z-index: -1000; */ 
 
-.popup {
+  
+}
+/* .popup {
+  background: transparent; 
+} */
+.popup-inner {
   background: white;
   padding: 20px;
-  border-radius: 5px;
-  width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1001;
+  border-radius: 10px;
+  width: 500px; /* Increase the width as needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.popup h2 {
+.popup-inner h2 {
   margin-top: 0;
+  margin-bottom: 20px;
+  font-size: larger;
+  color: #726f6f;
 }
 
-.popup form {
+.popup-inner form {
   display: flex;
   flex-direction: column;
 }
 
-.popup form label {
-  margin-top: 10px;
-}
-
-.popup form input,
-.popup form textarea {
-  margin-top: 5px;
-  padding: 8px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.popup form button {
-  margin-top: 20px;
-  padding: 10px;
-  font-size: 14px;
-  cursor: pointer;
+.popup-inner input[type="text"],
+.popup-inner input[type="datetime-local"],
+.popup-inner textarea {
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 15px;
   border: none;
-  border-radius: 5px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  outline: none;
+  font-size:smaller;
+  font-family: 'inter',sans-serif;
 }
 
-.popup form button[type="submit"] {
-  background-color: #007bff;
-  color: white;
+.popup-inner input[type="text"]::placeholder,
+.popup-inner input[type="datetime-local"]::placeholder,
+.popup-inner textarea::placeholder {
+  color: #aaa;
+  font-size: 1em;
 }
 
-.popup form button[type="button"] {
-  background-color: #6c757d;
-  color: white;
-  margin-left: 10px;
+.popup-inner input[type="text"]:focus,
+.popup-inner input[type="datetime-local"]:focus,
+.popup-inner textarea:focus {
+  border-bottom: 2px solid #BFAAFF;
 }
-.button1-sav{
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.btnmeet-sav{
+  height: 35px;
+  width: 80px;
   background-color: #7E64F1;
-  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  box-shadow: 0px 4px 8px rgba(57, 56, 59, 0.6);
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 7px;
   cursor: pointer;
+  margin-left: 65%;
+  font-weight: bold;
+  color: white;
+
 }
-.button2-can{
-  
+.btnmeet-cancel {
   box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
   padding: 4px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
+.btnmeet-sav:hover{
+  opacity: 0.9;
+}
+.btnmeet-cancel:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .popup-inner {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .popup-inner h2 {
+    font-size: 1.2em;
+  }
+
+  .btnmeet-sav,
+  .btnmeet-cancel {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}
+
+
 
 /* create contact  */
 
@@ -2448,6 +2495,7 @@ th:not(:first-child) {
   margin-bottom: 4px;
   margin-right: 40px;
   color: #4d5053;
+ 
 }
 .my-form input {
   padding: 8px;
@@ -2455,6 +2503,7 @@ th:not(:first-child) {
   border-radius: 8px; /* Curved corners */
   border: 1px solid #ccc; /* Border styling */
   margin-bottom: 8px; /* Gap between fields */
+
 }
 
 
@@ -2781,3 +2830,131 @@ th:not(:first-child) {
 .timeline-content {
   padding: 20px;
 }
+
+/* add task form style  */
+
+.reminder-popup {
+  width: 20%;
+  height: 150px;
+  position: absolute;
+  top: 86%;
+  left: 61%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  background-color: #fcf8f8;
+}
+
+
+.popup-message {
+  display: flex;
+  align-items: center;
+}
+
+.popup-icon {
+  margin-right: 10px;
+}
+
+.popup-text {
+ display: flex;
+}
+.on-button{
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+
+.at-button {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.date-button{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 16px;
+}
+ .time-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 16px;
+ }
+.date-button svg, .time-button svg {
+  margin-left: 5px;
+}
+
+
+
+.date-button span, .time-button span {
+  color: #333;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+.popup-buttons{
+  margin-top: 10px;
+}
+
+.toggle-cancel {
+  background-color: #ccc;
+  color: #333;
+  margin-left: 40%;
+  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.toggle-save {
+  background-color: #7E64F1;
+  color: #fff;
+  margin-left: 10px;
+  box-shadow: 0 2px 4px rgba(156, 132, 167, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+/* notify */
+.boredr{
+  margin-top:-10px ;
+  border-top: 1px solid #ccc;
+}
+
+
+.notify-options {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px; 
+  font-weight: bold;
+
+}
+
+.border-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000; /* Change to desired border color */
+  margin: 10px 0;
+}
+
+.custom-select {
+  margin-left: 50%;
+  border: none;
+  appearance: none; /* Remove default arrow */
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+}
+
+.custom-select:focus {
+}
+
+  

@@ -7,7 +7,14 @@ import profileImage from './assets/profile.jpg';
 
 
 export default function AddMeeting(){
+   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
+   const togglePopup = () => {
+     setIsPopupVisible(!isPopupVisible);
+   };
+ 
+
+ 
    
 return (
     <>
@@ -53,9 +60,32 @@ return (
    <div className="meetinner-card2">
     <div className="partihead-butt">
    <div className="add-partipint">Partcipants</div>
-   <button className="addparti-button">Add</button>
+   <button className="addparti-button" onClick={togglePopup}>Add</button>
    </div>
-   <div className="add-noparti">No paticipants found</div>
+   <div className="add-noparti">No paticipants found</div> 
+   {isPopupVisible && (
+      <>
+      <div className="popup-cardmeet">
+        
+      <div className="name-options">
+      <span className="name-text">John Alexander</span>
+           <select className="name-select">
+          {/* Options for pickup named drop box */}
+          <option value=""></option>
+          <option value="1">Doe</option>
+          <option value="2">Sheik</option>
+          <option value="3">Cina</option>
+        </select>
+      </div>
+
+          <div className="popup-buttonsmeet">
+            <button className="cancel-buttonm" onClick={togglePopup}>Cancel</button>
+            <button className="save-buttonm">Save</button>
+          </div>
+        </div>
+        </>
+      )}
+  
    
 </div>
 <div className="meetinner-card3">
