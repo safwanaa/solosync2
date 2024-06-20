@@ -1,8 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import "./App.css";
 import Card from '@mui/material/Card';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 // import StackedDoughnutChart from './StackedDoughnutChart';
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  PieChart,
+  Pie,
+  Cell,  ReferenceDot
+
+} from 'recharts';
 
 
 
@@ -30,14 +43,6 @@ const App = () => {
   }, []);
 
 
-  const data = [
-    { name: 'M', revenue: 10 },
-    { name: 'T', revenue: 20 },
-    { name: 'W', revenue: 15 },
-    { name: 'T', revenue: 30 },
-    { name: 'F', revenue: 25 },
-    { name: 'S', revenue: 30 },
-  ];
 
 
   const COLOR = ['#F8C646'];
@@ -58,7 +63,17 @@ const App = () => {
   const data3 = [
     { name: 'Group F', value: 150 },
   ];
+//  #linechart
 
+const lineChartData = [
+  { name: 'M', revenue: 30 },
+  { name: 'T', revenue: 50 },
+  { name: 'W', revenue: 45 },
+  { name: 'T', revenue: 60 },
+  { name: 'F', revenue: 70 },
+  { name: 'S', revenue: 50 },
+  { name: 'S', revenue: 90 },
+];
   // const pieChartData = [
   //   { name: 'Group A', value: 400 },
   //   { name: 'Group B', value: 300 },
@@ -124,32 +139,35 @@ const App = () => {
                 </div>
               </div>
               <div className='linechart-container'>
-                <div className='linechart-cell'>
-                  <div className='border-line'></div><br/>
-                  <div className='border-line1'></div> <br/>
-                   <div className='border-line2'></div>
-                  <ResponsiveContainer width="80%" height={180}>
-                    <LineChart data={data}>
-                      {/* Customizing grid lines */}
-                      {/* <CartesianGrid stroke="#ccc" /> */}
-
-                      {/* Customizing X-axis */}
-                      <XAxis dataKey="name" stroke="#8884d8" />
-
-                      {/* Customizing Y-axis */}
-                      <YAxis dataKey="revenue" stroke="#8884d8" />
-
-                      {/* Customizing Tooltip */}
-                      <Tooltip wrapperStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.8)', color: '#fff' }} />
-
-                      {/* Customizing Legend */}
-                      <Legend wrapperStyle={{ color: '#333', fontSize: '7px' }} />
-
-                      {/* Customizing Line */}
-                      <Line type="monotype" dataKey="revenue" stroke="#7E64F1" strokeWidth={1} dot={{ fill: '#A793FF' }} activeDot={{ r: 8 }} legendType="circle" animationDuration={200} animationBegin={200} />
-                    </LineChart>
-                  </ResponsiveContainer >
-                </div>
+              <ResponsiveContainer width="100%" height={200}>
+        <LineChart data={lineChartData} margin={{ top: 10, right: 30, left: 30, bottom: 5 }}>
+          {/* Uncomment the line below to add grid lines */}
+          {/* <CartesianGrid vertical={false} horizontal={false} strokeDasharray="3 3" /> */}
+          <XAxis dataKey="name" />
+          <Tooltip />
+          <Legend />
+          {lineChartData.map((entry, index) => (
+            <ReferenceDot
+              key={index}
+              x={entry.name}
+              y={entry.revenue}
+              r={1} // This creates a small dot at the exact data point
+              stroke="none"
+              fill="none"
+            >
+              <line
+                x1={0}
+                y1={200 - entry.revenue} // 200 is the height of the chart; adjust if necessary
+                x2={0}
+                y2={0}
+                stroke="#8884d8"
+                strokeWidth={3}
+              />
+            </ReferenceDot>
+          ))}
+          <Line type="monotone" dataKey="revenue" stroke="#8884d8" strokeWidth={6} activeDot={{ r: 8}} />
+        </LineChart>
+      </ResponsiveContainer>
 
               </div>
             </div>

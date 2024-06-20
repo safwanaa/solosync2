@@ -46,28 +46,28 @@ function App() {
      
       <ul className='app-header'>
            <li>
-              <Link to="/">Home</Link>
+              <Link to="/"></Link>
             </li>
             <li>
-              <Link to="/task">Tasks</Link>
+              <Link to="/task"></Link>
             </li>
             <li>
-              <Link to="/meeting">Meetings</Link>
+              <Link to="/meeting"></Link>
             </li>
             <li>
-              <Link to="/contact">Contacts</Link>
+              <Link to="/contact"></Link>
             </li>
             <li>
-              <Link to="/calls">Calls</Link>
+              <Link to="/calls"></Link>
             </li>
             <li>
-              <Link to="/lead">Leads</Link>
+              <Link to="/lead"></Link>
             </li>
             <li>
-              <Link to="/deal">deals</Link>
+              <Link to="/deal"></Link>
             </li>
             <li>
-              <Link to="/analytics">analytics</Link>
+              <Link to="/analytics"></Link>
             </li>
        </ul>
       <Routes>

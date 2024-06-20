@@ -1,4 +1,3 @@
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -98,6 +97,104 @@
   }
 }
 
+/* profile setting */
+.profile-popup {
+  position: absolute;
+  width: 11%;
+  height: 41%;
+  top: 27.5%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it appears above other content */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-set {
+  width: 50px; /* Example width */
+  height: 50px; /* Example height */
+  border-radius: 50%; /* Example border radius for a circular image */
+  margin-bottom: 20px;
+
+
+}
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+
+
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the profile info */
+  text-align: center; /* Center align the text */
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.email {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: -20px;
+
+}
+
+.labels {
+  margin-top: 30px; /* Adds space before the labels */
+  margin-left: -70px;
+}
+
+.label-group {
+  margin-bottom: 10px; /* Adds space between label groups */
+}
+.logout {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align the actions */
+  gap: 10px; /* Adjust spacing between actions */
+  margin-top: -20px; /* Adds space before the actions */
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.action.logout {
+  color: red; /* Makes the logout button red */
+}
+.action svg {
+  margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+.action.logout:hover {
+  color: #d81b1b; /* Change color on hover */
+}
+
 /* header */
 /* Header.css */
 
@@ -187,7 +284,9 @@
   box-sizing: border-box;
   border-right: 1px solid #ccc;
   top: 48px;
-  background-color: #fffbfb;
+  background-color: #f8f9fa;
+  transform: translateX(0);
+
 
 
 
@@ -205,9 +304,9 @@
 
 
 .profile-icon-square {
-  width: 20px;
+  width: 25px;
   /* Adjust size as needed */
-  height: 20px;
+  height: 25px;
   /* Adjust size as needed */
   display: flex;
   justify-content: center;
@@ -218,6 +317,8 @@
   background-color: #BFAAFF;
   position: relative;
   border-radius: 5px;
+  font-size: 17px; /* Adjust font size as needed */
+  font-weight: bold; /* Ensure text is bold */
 
 }
 
@@ -331,10 +432,10 @@
 
 
 .sidebar-foot {
-  border-bottom: 1px solid #ccc; 
-  margin-top: calc(100vh - 480px);
+  margin-top: calc(100vh - 430px);
   padding-left: 10%;
   font-family: 'inter', sans-serif;
+
 
 
 }
@@ -344,6 +445,7 @@
   vertical-align: middle;
   color: grey;
 }
+
 
 @media screen and (max-width: 768px) {
   .sidebar-foot {
@@ -355,6 +457,10 @@
 }
 
 
+
+
+
+/* home page content main */
 .main-div {
   display: flex;
   height: 1400px;
@@ -592,13 +698,11 @@
 .custom-hr1,
 .custom-hr2,
 .custom-hr3 {
-  margin: 10px;
+ 
   border-radius: 10px;
   margin-bottom: 10px;
-  
-  
-  height: 15px;
-}
+  height: 13px;
+} 
 
 .custom-hr1 {
   width: 60%;
@@ -784,6 +888,29 @@
   padding-top: 20px;
 
 }
+/* linechart */
+.linechart-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Optional: Customize tooltip */
+.recharts-tooltip-wrapper {
+  background-color: white;
+  border: 3px solid #7E64F1;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Optional: Customize legend */
+.recharts-default-legend {
+  font-size: 14px;
+  font-weight: bold;
+}
+ /* linecharat */
 
 
 /* deal */
@@ -1021,7 +1148,7 @@
   background-color: #7E64F1;
   border:#ccc;
   padding: 3px 16px;
-  font-size: 15px;
+  font-size: 15px; 
   font-family: 'inter',sans-serif;
   cursor: pointer;
   border-radius: 6px;
@@ -1050,6 +1177,7 @@
   margin-top: 25px; 
   margin-left:17%;
   overflow:hidden;
+ margin-top: -150px;
 }
 .add-new-taskho{
   font-family: 'inter',sans-serif;
@@ -1101,7 +1229,7 @@
 }
 
 .taskinner-card1{
-  width: 45vw;
+width: 45vw;
  height: calc(100vh - 650px);
 border-radius: 9px;
 box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
@@ -1140,6 +1268,7 @@ padding-bottom: 20px;
   display: flex;
   gap:60px;
   align-items: center;
+  
 }
 .task-item span{
   color: #4d5053;
@@ -1154,33 +1283,35 @@ padding-bottom: 20px;
 
 
 .taskinner-card2{
-  width: 45vw;
- height: calc(100vh - 400px);
+width: 45vw;
+height: calc(100vh - 400px);
 border-radius: 9px;
 box-shadow: 2px 2px 2px 2px rgba(24, 24, 23, 0.233);
 margin-top: 10px;
 padding: 70px;
 margin-left: 5px;
 padding-bottom: 20px;
-
 }
+
+.addtask-information{
+  margin-top: -30px;
+  font-family: 'inter',sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add margin to create space below the heading */
+
+
+} 
 
 .task-item1 {
   margin-bottom: 10px;
   display: flex;
   gap:60px;
-  align-items: center;
+ 
 } 
 .task-item1 span{
   color: #4d5053;
 }
-.addtask-information{
-  margin-top: -50px;
-  font-family: 'inter',sans-serif;
-  font-weight: bold;
-  border-bottom: 1px solid black; /* Optional: Add border to the card container */
 
-} 
 /* add new meet */
 .addmeet-maincard{
   height: calc(100vh - 60px);
@@ -1191,6 +1322,7 @@ padding-bottom: 20px;
   margin-top: 25px; 
   margin-left:17%;
   overflow:hidden;
+  margin-top: -150px;
  
 
 }
@@ -1621,8 +1753,110 @@ button:hover {
     margin-top: 10px;
   }
 }
+
+
+/* other componnets */
+.both-butt{
+  display: flex;
+  padding-left: 800px;
+}  
+.addbutt button {
+  width: 150px;
+  height: 30px;
+  background-color: #7E64F1;
+  border:#ccc;
+  padding: 3px 16px;
+  font-size: 15px;
+  font-family: 'inter',sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  margin-bottom: 4px;
+}
+
+.addbutt button:hover {
+  background-color:#BFAAFF; /* Darker shade for hover effect */
+}
+
+.addbutt button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.addbutt svg{
+  color: white;
+  
+  
+}
+/* button 2 */
+
+.popup {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 8px;
+}
+
+.popup button {
+  display: block;
+  margin-bottom: 4px;
+}
+.action-task{
+ 
+  margin-left: 10px;
+  width: 150px;
+  height: 30px;
+  background-color:white;
+  border:grey;
+  padding: 3px 16px;
+  font-size: 15px;
+  font-family: 'inter',sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
+  }
+  
+  /* Hover effect */
+  .action-task:hover {
+  background-color:#ccc; /* Darker blue on hover */
+  }
+
+
+
+/* Task maincard */
+  .task-maincard {
+  height: calc(100vh - 60px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+
+
+}
+
+
 /* add newtask content card */
-.inner-card{
+.addtask-maincard{
+  height: calc(100vh - 5px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:auto;
+  margin-top: -140px;
+
+}
+.inneraddnew-card{
   width: 69vw;
   height: calc(100vh - 300px);
   border-radius: 2px;
@@ -1632,6 +1866,7 @@ button:hover {
   margin-left: 5px;
   padding-bottom: 20px;
   overflow-x: auto;
+
 }
 .task-infohead{
   font-family: 'inter',sans-serif;
@@ -1742,102 +1977,134 @@ select.underline::-ms-expand {
   margin-top: -60px;
 }
 
+/* add task toggle switch form style  */
 
-
-/* other componnets */
-.both-butt{
-  display: flex;
-  padding-left: 800px;
-}  
-.addbutt button {
-  width: 150px;
-  height: 30px;
-  background-color: #7E64F1;
-  border:#ccc;
-  padding: 3px 16px;
-  font-size: 15px;
-  font-family: 'inter',sans-serif;
-  cursor: pointer;
-  border-radius: 6px;
-  color: white;
-  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
-  margin-bottom: 4px;
-}
-
-.addbutt button:hover {
-  background-color:#BFAAFF; /* Darker shade for hover effect */
-}
-
-.addbutt button:focus {
-  outline: none; /* Remove focus outline */
-}
-
-.addbutt svg{
-  color: white;
-  
-  
-}
-/* button 2 */
-
-.popup {
-  display: none;
+.reminder-popup {
+  width: 20%;
+  height: 150px;
   position: absolute;
-  top: calc(100% + 5px);
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 8px;
-}
-
-.popup button {
-  display: block;
-  margin-bottom: 4px;
-}
-.action-task{
- 
-  margin-left: 10px;
-  width: 150px;
-  height: 30px;
-  background-color:white;
-  border:grey;
-  padding: 3px 16px;
-  font-size: 15px;
-  font-family: 'inter',sans-serif;
-  cursor: pointer;
-  border-radius: 6px;
-  color: black;
-  box-shadow: 0px 4px 8px rgba(126, 100, 241, 0.6);
-  }
-  
-  /* Hover effect */
-  .action-task:hover {
-  background-color:#ccc; /* Darker blue on hover */
-  }
-
-/* task content */
-
-/* .maindiv-t {
-  width: 80%; 
-  margin: 0 auto; 
-  padding: 20px; 
-  background-color: #BFAAFF;
-}  */
-
-.task-maincard {
-  height: calc(100vh - 60px);
-  width:80%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 86%;
+  left: 61%;
+  background-color: white;
   padding: 20px;
-  margin-top: 25px; 
-  margin-left:17%;
-
+  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  background-color: #f8f9fa;
 }
 
 
-/* main card record */
+.popup-message {
+  display: flex;
+  align-items: center;
+}
+
+.popup-icon {
+  margin-right: 10px;
+}
+
+.popup-text {
+ display: flex;
+}
+.on-button{
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+
+.at-button {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.date-button{
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 16px;
+}
+ .time-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  border-radius: 16px;
+ }
+.date-button svg, .time-button svg {
+  margin-left: 5px;
+}
+
+
+
+.date-button span, .time-button span {
+  color: #333;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+.popup-buttons{
+  margin-top: 10px;
+}
+
+.toggleswitch-cancel {
+  background-color: #ccc;
+  color: #333;
+  margin-left: 40%;
+  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.toggleswitch-save {
+  background-color: #7E64F1;
+  color: #fff;
+  margin-left: 10px;
+  box-shadow: 0 2px 4px rgba(156, 132, 167, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+/* notify */
+.boredr{
+  margin-top:-10px ;
+  border-top: 1px solid #ccc;
+}
+
+
+.notify-options {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px; 
+  font-weight: bold;
+
+}
+
+.border-line {
+  width: 100%;
+  height: 1px;
+  background-color: #000; /* Change to desired border color */
+  margin: 10px 0;
+}
+
+.custom-select {
+  margin-left: 50%;
+  border: none;
+  appearance: none; /* Remove default arrow */
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+}
+
+.custom-select:focus {
+}
+
+/* main card 10 record per page */
+
 .taskside-align{
   display: flex;
   flex-direction: column;
@@ -1851,11 +2118,12 @@ width: 19%; /* Adjust width as needed */
 margin-left: 70%;
 display: flex;
 align-items: center;
+margin-top: -20px;
 
 }
 
 .record-div select {
-  height: 90%;
+  height: 87%;
   width: 100%;
   padding: 8px;
   border-radius: 8px;
@@ -1869,15 +2137,12 @@ align-items: center;
   
 }
 
-/* Style for select options */
 .record-div select option {
   font-size: 15px; /* Font size */
   font-family: 'inter';
   
  
 }
-
-
 .great {
   margin-left: 95%;
   margin-bottom: -300px;
@@ -1958,12 +2223,12 @@ align-items: center;
   
 }
 
-/* calls pagecss */
+/* Call main page  */
 .sechdled{
   font-family: 'inter',sans-serif;
   font-weight: bold;
   color: #525151;
- 
+  margin-top: -90px;
 
 }
 
@@ -1985,7 +2250,8 @@ align-items: center;
 
 
 
-/* analytics page */
+/* analytics mainpage */
+
 .analytics-maincard{
   height: calc(200vh - 50px);
   width:80%;
@@ -2014,8 +2280,8 @@ align-items: center;
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 .half-doughnut canvas {
-  width: 200px; /* Adjust width as needed */
-  height: 150px; /* Adjust height as needed */
+  width: 400px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
   display: block;
 }
 
@@ -2247,8 +2513,7 @@ th:not(:first-child) {
 
 
 
-/* Meeting.css */
-/* Main CSS for the popup and its content */
+/* Meeting page add meeting popup form messg*/
 .popup {
   position: fixed;
   top: 0;
@@ -2263,9 +2528,7 @@ th:not(:first-child) {
 
   
 }
-/* .popup {
-  background: transparent; 
-} */
+
 .popup-inner {
   background: white;
   padding: 20px;
@@ -2367,7 +2630,7 @@ th:not(:first-child) {
 
 
 
-/* create contact  */
+/* create contact/contact  */
 
 .creatcont-maincard{
   height: calc(100vh - 5px);
@@ -2378,6 +2641,7 @@ th:not(:first-child) {
   margin-top: 25px; 
   margin-left:17%;
   overflow:hidden;
+  margin-top: -150px;
 }
 .add-new-contact{
   font-family: 'inter', sans-serif;
@@ -2465,7 +2729,7 @@ th:not(:first-child) {
   height: 100%;
   object-fit: cover;
 }
-/* contact info */
+
 .contact-info{
   font-family: 'inter', sans-serif;
   color: #4d5053;
@@ -2581,7 +2845,19 @@ th:not(:first-child) {
   font-weight: bold;
 }
 
-/* create contact profile */
+/* create contact profile /david luca */
+.creatcontpro-maincard{
+  height: calc(100vh - 5px);
+  width:80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 25px; 
+  margin-left:17%;
+  overflow:auto;
+  margin-top: -140px;
+
+}
 .editcontbutt-profile button{
   background-color: #7E64F1; /* Green background */
   border: none; /* Remove borders */
@@ -2600,17 +2876,7 @@ th:not(:first-child) {
 
 }
 
-.creatcontpro-maincard{
-  height: calc(100vh - 5px);
-  width:80%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 25px; 
-  margin-left:17%;
-  overflow:hidden;
-}
-/* profilepic2 */
+
 .profile-container2 {
   display: flex;
   align-items: center;
@@ -2831,130 +3097,23 @@ th:not(:first-child) {
   padding: 20px;
 }
 
-/* add task form style  */
 
-.reminder-popup {
-  width: 20%;
-  height: 150px;
-  position: absolute;
-  top: 86%;
-  left: 61%;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
-  border-radius: 8px;
-  z-index: 1000;
-  background-color: #fcf8f8;
+
+
+#sidebar.minimized {
+  width: 60px; /* adjust as needed */
 }
 
-
-.popup-message {
-  display: flex;
-  align-items: center;
-}
-
-.popup-icon {
-  margin-right: 10px;
-}
-
-.popup-text {
- display: flex;
-}
-.on-button{
-  display: inline-block;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-
-.at-button {
-  display: inline-block;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.date-button{
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f5f5f5;
-  cursor: pointer;
-  border-radius: 16px;
-}
- .time-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f5f5f5;
-  cursor: pointer;
-  border-radius: 16px;
- }
-.date-button svg, .time-button svg {
-  margin-left: 5px;
+#sidebar:not(.minimized) .profile-icon-square,
+#sidebar:not(.minimized) .novox {
+    display: block;
 }
 
 
 
-.date-button span, .time-button span {
-  color: #333;
-  margin-right: 5px;
-  margin-bottom: 20px;
-}
-.popup-buttons{
-  margin-top: 10px;
-}
 
-.toggle-cancel {
-  background-color: #ccc;
-  color: #333;
-  margin-left: 40%;
-  box-shadow: 0 2px 4px rgba(12, 1, 1, 0.1);
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.toggle-save {
-  background-color: #7E64F1;
-  color: #fff;
-  margin-left: 10px;
-  box-shadow: 0 2px 4px rgba(156, 132, 167, 0.1);
-  border-radius: 8px;
-  margin-top: 20px;
-}
-/* notify */
-.boredr{
-  margin-top:-10px ;
-  border-top: 1px solid #ccc;
-}
-
-
-.notify-options {
-  position: relative;
-  margin-bottom: 20px;
-  margin-top: 20px; 
-  font-weight: bold;
-
-}
-
-.border-line {
-  width: 100%;
-  height: 1px;
-  background-color: #000; /* Change to desired border color */
-  margin: 10px 0;
-}
-
-.custom-select {
-  margin-left: 50%;
-  border: none;
-  appearance: none; /* Remove default arrow */
-  background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
-}
-
-.custom-select:focus {
+#sidebar.minimized ul li span {
+  display: none;
 }
 
   

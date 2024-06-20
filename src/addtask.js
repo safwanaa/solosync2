@@ -50,7 +50,7 @@ return (
    </div>
    </div>
    
-   <div class="inner-card">
+   <div class="inneraddnew-card">
    <div className="task-infohead">Task Information</div>
    <form>
   <div class="form-group">
@@ -116,8 +116,8 @@ return (
             <div className="boredr">&nbsp;</div> 
              
               <div className="popup-buttons">
-                <button className="toggle-cancel" onClick={() => setShowPopup(false)}>Cancel</button>
-                <button className="toggle-save">Save</button>
+                <button className="toggleswitch-cancel" onClick={() => setShowPopup(false)}>Cancel</button>
+                <button className="toggleswitch-save">Save</button>
               </div>
             </div>
           )}
